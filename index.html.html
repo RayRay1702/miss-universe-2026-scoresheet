@@ -1,0 +1,2296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>75th Miss Universe 2026 — Preliminary Watch-Party Score Sheet</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Adero Medium"', 'Adero', '"Space Grotesk"', '"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+            display: ['"Adero Medium"', 'Adero', '"Space Grotesk"', '"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            stagevoid: '#05080F',
+            stageabyss: '#09111E',
+            stageglass: '#0E1B2E',
+            sapphire: '#0B3C6D',
+            cobalt: '#1475C7',
+            cyanbeam: '#38BDF8',
+            icebeam: '#93E5FF',
+            silvermist: '#E6F1FA',
+            mutedslate: '#8EA8C3',
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    /* Attempt Adero Medium via local/CDN font-face declarations with graceful sans fallbacks */
+    @font-face {
+      font-family: 'Adero Medium';
+      src: local('Adero Medium'), local('Adero-Medium'), local('AderoMedium'),
+           url('https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk/files/space-grotesk-latin-500-normal.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Adero Medium';
+      src: local('Adero Medium Bold'), local('Adero Medium SemiBold'), local('Adero-Medium'),
+           url('https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk/files/space-grotesk-latin-700-normal.woff2') format('woff2');
+      font-weight: 600 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    body {
+      background-color: #05080F;
+      background-image:
+        radial-gradient(ellipse 85% 45% at 50% -6%, rgba(56, 189, 248, 0.24) 0%, rgba(20, 117, 199, 0.11) 42%, transparent 72%),
+        radial-gradient(circle at 15% 24%, rgba(11, 60, 109, 0.34) 0%, transparent 48%),
+        radial-gradient(circle at 86% 20%, rgba(20, 117, 199, 0.22) 0%, transparent 46%),
+        linear-gradient(180deg, #05080F 0%, #070E1A 55%, #05080F 100%);
+      background-attachment: fixed;
+      color: #E6F1FA;
+      font-family: 'Adero Medium', 'Space Grotesk', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 1.5;
+      letter-spacing: -0.005em;
+      -webkit-tap-highlight-color: transparent;
+      overflow-x: hidden;
+    }
+
+    .font-display {
+      font-family: 'Adero Medium', 'Space Grotesk', 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.015em;
+      line-height: 1.2;
+    }
+
+    /* Full-bleed country flag backdrop with theatrical spotlights when viewing a candidate */
+    #delegateFlagBackdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.28s ease;
+    }
+
+    #delegateFlagBackdrop.active {
+      opacity: 1;
+    }
+
+    #delegateFlagBackdropImg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: contrast(1.08) saturate(1.12);
+    }
+
+    #delegateFlagSpotlights {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(122deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.06) 14%, transparent 28%),
+        linear-gradient(235deg, rgba(147, 229, 255, 0.18) 0%, transparent 32%),
+        radial-gradient(circle at 50% 34%, rgba(5, 8, 15, 0.14) 0%, rgba(5, 8, 15, 0.62) 72%, rgba(5, 8, 15, 0.84) 100%),
+        linear-gradient(180deg, rgba(5, 8, 15, 0.48) 0%, rgba(5, 8, 15, 0.26) 48%, rgba(5, 8, 15, 0.78) 100%);
+    }
+
+    /* Glass-over-flag portrait frame so the country flag shines through the glass effect */
+    .flag-glass-portrait {
+      position: relative;
+      overflow: hidden;
+      background-color: #091322;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .flag-glass-portrait::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(130deg, rgba(147, 229, 255, 0.24) 0%, rgba(9, 17, 30, 0.36) 48%, rgba(5, 8, 15, 0.56) 100%);
+      backdrop-filter: blur(4px) saturate(135%);
+      -webkit-backdrop-filter: blur(4px) saturate(135%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .flag-glass-portrait img {
+      position: relative;
+      z-index: 2;
+      object-fit: cover;
+      object-position: 50% 18%;
+      filter: contrast(1.05) saturate(1.08) brightness(1.03);
+    }
+
+    /* Multi-faceted stage glass cards inspired by faceted sapphire/cyan stage beams & silver reflections */
+    .stage-glass {
+      position: relative;
+      background: linear-gradient(145deg, rgba(17, 31, 52, 0.82) 0%, rgba(9, 17, 30, 0.88) 58%, rgba(11, 44, 78, 0.72) 100%);
+      backdrop-filter: blur(18px) saturate(150%);
+      -webkit-backdrop-filter: blur(18px) saturate(150%);
+      border: 1px solid rgba(147, 229, 255, 0.22);
+      box-shadow:
+        0 12px 32px -10px rgba(0, 0, 0, 0.75),
+        0 0 0 1px rgba(20, 117, 199, 0.14),
+        inset 0 1px 0 rgba(230, 241, 250, 0.24),
+        inset 14px 0 28px -22px rgba(56, 189, 248, 0.28);
+    }
+
+    .stage-glass::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      pointer-events: none;
+      background: linear-gradient(
+        118deg,
+        rgba(147, 229, 255, 0.14) 0%,
+        rgba(56, 189, 248, 0.04) 24%,
+        transparent 46%,
+        rgba(20, 117, 199, 0.08) 82%,
+        rgba(147, 229, 255, 0.12) 100%
+      );
+    }
+
+    .stage-glass-facet {
+      background: linear-gradient(150deg, rgba(20, 38, 64, 0.72) 0%, rgba(7, 14, 26, 0.82) 100%);
+      backdrop-filter: blur(14px) saturate(145%);
+      -webkit-backdrop-filter: blur(14px) saturate(145%);
+      border: 1px solid rgba(147, 229, 255, 0.18);
+      box-shadow: inset 0 1px 0 rgba(230, 241, 250, 0.16);
+    }
+
+    .stage-glass-highlight {
+      background: linear-gradient(145deg, rgba(16, 48, 82, 0.88) 0%, rgba(9, 22, 38, 0.90) 60%, rgba(20, 117, 199, 0.26) 100%);
+      backdrop-filter: blur(18px) saturate(155%);
+      -webkit-backdrop-filter: blur(18px) saturate(155%);
+      border: 1px solid rgba(56, 189, 248, 0.52);
+      box-shadow:
+        0 0 24px -6px rgba(56, 189, 248, 0.35),
+        0 12px 28px -10px rgba(0, 0, 0, 0.8),
+        inset 0 1px 0 rgba(147, 229, 255, 0.36);
+    }
+
+    /* Mobile-friendly range sliders in cobalt & icy cyan spotlight */
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      background: transparent;
+      cursor: pointer;
+      touch-action: pan-y;
+    }
+
+    input[type="range"]::-webkit-slider-runnable-track {
+      height: 8px;
+      border-radius: 9999px;
+      background: rgba(11, 60, 109, 0.55);
+      border: 1px solid rgba(147, 229, 255, 0.25);
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 9999px;
+      background: linear-gradient(135deg, #93E5FF 0%, #38BDF8 45%, #1475C7 100%);
+      border: 2px solid #E6F1FA;
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.65), 0 2px 6px rgba(0, 0, 0, 0.6);
+      margin-top: -9px;
+      transition: transform 0.12s ease;
+    }
+
+    input[type="range"]::-webkit-slider-thumb:active {
+      transform: scale(1.12);
+    }
+
+    input[type="range"].gown-slider::-webkit-slider-thumb {
+      background: linear-gradient(135deg, #38BDF8 0%, #1475C7 55%, #0B3C6D 100%);
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="min-h-screen pb-24 text-silvermist">
+
+  <!-- Full-Bleed Country Flag Backdrop for Candidate Scoring View -->
+  <div id="delegateFlagBackdrop" aria-hidden="true">
+    <img id="delegateFlagBackdropImg" src="" alt="" />
+    <div id="delegateFlagSpotlights"></div>
+  </div>
+
+  <!-- Top Sticky Stage Glass Header -->
+  <header class="sticky top-0 z-30 bg-stagevoid/82 backdrop-blur-xl border-b border-icebeam/15 shadow-lg">
+    <div class="max-w-4xl mx-auto px-3 sm:px-4 py-2">
+      <div class="flex items-center justify-between gap-2">
+        <!-- Official MU75 Star Logo & Event Title -->
+        <div class="flex items-center gap-2 sm:gap-2.5 min-w-0">
+          <button
+            id="brandLogoBtn"
+            type="button"
+            onclick="openLogoModal()"
+            title="Official MU75 Star Emblem • Tap to customize logo"
+            class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl stage-glass-facet flex items-center justify-center shrink-0 hover:border-cyanbeam/60 transition active:scale-95"
+          >
+            <span id="headerLogoContainer" class="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center">
+              <!-- Official MU75 Star Emblem (Main Celestial Star + Companion Star Below-Left) -->
+              <svg class="w-8 h-8 sm:w-9 sm:h-9" viewBox="0 0 80 80" fill="none" aria-label="75th Miss Universe Official Star Logo">
+                <defs>
+                  <linearGradient id="mu75MainGrad" x1="18" y1="6" x2="72" y2="56" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#93E5FF" />
+                    <stop offset="48%" stop-color="#38BDF8" />
+                    <stop offset="100%" stop-color="#1475C7" />
+                  </linearGradient>
+                  <linearGradient id="mu75SubGrad" x1="8" y1="54" x2="26" y2="74" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#93E5FF" />
+                    <stop offset="100%" stop-color="#1475C7" />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M44 2L47.2 26.2L68 13L50.4 30.8L75 34L50.4 37.2L63.5 54L47.2 41.8L44 60L40.8 41.8L23 54L37.6 37.2L16 34L37.6 30.8L25 14L40.8 26.2L44 2Z"
+                  fill="url(#mu75MainGrad)"
+                />
+                <circle cx="44" cy="34" r="3.2" fill="#E6F1FA" fill-opacity="0.92" />
+                <path
+                  d="M17 53L18.4 62.6L26 64L18.4 65.4L17 75L15.6 65.4L8 64L15.6 62.6L17 53Z"
+                  fill="url(#mu75SubGrad)"
+                />
+              </svg>
+            </span>
+          </button>
+
+          <div class="min-w-0">
+            <div class="flex items-center gap-1.5">
+              <h1 class="font-display text-base sm:text-xl text-icebeam truncate">
+                75th Miss Universe • 2026
+              </h1>
+              <button
+                type="button"
+                onclick="toggleScheduleStrip()"
+                class="sm:hidden text-[11px] px-2 py-0.5 rounded-md stage-glass-facet text-icebeam shrink-0"
+              >
+                Info
+              </button>
+            </div>
+            <p id="scheduleSubtitle" class="hidden sm:block text-xs text-mutedslate truncate">
+              San Juan, PR • Nat. Costume Nov 21 • Prelims Nov 22 • Coronation Nov 24
+            </p>
+          </div>
+        </div>
+
+        <!-- Compact Judge & Scored Pills -->
+        <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+          <button
+            type="button"
+            onclick="saveAndOpenShareModal()"
+            title="Save your progress and copy a share code for friends"
+            class="px-2.5 py-1.5 rounded-xl bg-gradient-to-r from-emerald-600/80 to-teal-700/80 hover:brightness-110 border border-emerald-300/40 text-emerald-50 text-xs transition active:scale-95 flex items-center gap-1"
+          >
+            <span>💾</span>
+            <span class="hidden sm:inline">Save &amp; Share</span>
+          </button>
+          <button
+            type="button"
+            onclick="openJudgeModal()"
+            class="px-2.5 py-1.5 rounded-xl stage-glass-facet hover:border-cyanbeam/50 text-left transition active:scale-95"
+          >
+            <div class="text-[10px] uppercase tracking-wider text-cyanbeam leading-none">Judge</div>
+            <div id="headerJudgeName" class="text-xs text-silvermist truncate max-w-[68px] sm:max-w-[115px] leading-snug mt-0.5">
+              Watch Party Judge
+            </div>
+          </button>
+          <div class="px-2.5 py-1.5 rounded-xl bg-gradient-to-br from-cobalt to-sapphire border border-icebeam/35 text-silvermist text-center shadow-sm">
+            <div class="text-[10px] uppercase tracking-wider text-icebeam/90 leading-none">Scored</div>
+            <div id="scoredProgressText" class="text-xs leading-snug mt-0.5">0/116</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Collapsible Mobile Event Schedule Strip -->
+      <div id="mobileScheduleStrip" class="hidden sm:hidden mt-2 px-3 py-2 rounded-xl stage-glass-facet text-xs text-mutedslate leading-relaxed">
+        San Juan, PR • Costume Nov 21 • Prelims Nov 22 • Final Nov 24
+      </div>
+
+      <!-- Search & Filter Bar (Shown on Score Tab) -->
+      <div id="scoreControlsBar" class="mt-2.5 space-y-2">
+        <div class="relative">
+          <input
+            id="delegateSearchInput"
+            type="text"
+            oninput="handleSearchInput(this.value)"
+            placeholder="Search country, name, or #1–116..."
+            class="w-full stage-glass-facet focus:border-cyanbeam/70 rounded-xl pl-9 pr-9 py-2 text-sm text-silvermist placeholder-mutedslate focus:outline-none transition"
+          />
+          <svg class="w-4 h-4 text-cyanbeam absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <button
+            id="clearSearchBtn"
+            type="button"
+            onclick="clearSearchInput()"
+            class="hidden absolute right-2.5 top-2 text-xs text-mutedslate hover:text-silvermist px-1.5 py-0.5"
+            aria-label="Clear search"
+          >
+            ✕
+          </button>
+        </div>
+
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-0.5">
+          <button type="button" data-filter="all" onclick="setActiveFilter('all')" class="filter-chip px-3 py-1.5 rounded-full text-xs bg-gradient-to-r from-cobalt to-sapphire text-silvermist border border-icebeam/35 whitespace-nowrap transition">
+            All (116)
+          </button>
+          <button type="button" data-filter="unscored" onclick="setActiveFilter('unscored')" class="filter-chip px-3 py-1.5 rounded-full text-xs stage-glass-facet text-mutedslate hover:text-silvermist whitespace-nowrap transition">
+            Unscored
+          </button>
+          <button type="button" data-filter="scored" onclick="setActiveFilter('scored')" class="filter-chip px-3 py-1.5 rounded-full text-xs stage-glass-facet text-mutedslate hover:text-silvermist whitespace-nowrap transition">
+            Scored
+          </button>
+          <button type="button" data-filter="top30" onclick="setActiveFilter('top30')" class="filter-chip px-3 py-1.5 rounded-full text-xs stage-glass-facet text-icebeam hover:border-cyanbeam/50 whitespace-nowrap transition">
+            ★ Top 30
+          </button>
+          <button type="button" data-filter="cut85" onclick="setActiveFilter('cut85')" class="filter-chip px-3 py-1.5 rounded-full text-xs stage-glass-facet text-cyanbeam hover:border-cyanbeam/50 whitespace-nowrap transition">
+            85+ Cut
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="relative z-10 max-w-4xl mx-auto px-3.5 sm:px-4 pt-3 space-y-3">
+
+    <!-- TAB 1: SCORE DELEGATES -->
+    <section id="view-score" class="space-y-3">
+      <!-- Streamlined Action Toolbar -->
+      <div class="stage-glass rounded-2xl px-3.5 py-2.5 flex items-center justify-between gap-2.5 text-xs">
+        <div class="min-w-0">
+          <div class="text-icebeam truncate">
+            Scale: <span class="text-silvermist">NC 30 + Swim 35 + Gown 35 = 100</span>
+          </div>
+          <div class="hidden sm:block text-xs text-mutedslate truncate mt-0.5">
+            Tap any delegate card to score • Tap "Save &amp; Share" anytime to send your Top 30
+          </div>
+        </div>
+        <div class="flex items-center gap-1.5 shrink-0">
+          <button
+            type="button"
+            onclick="saveAndOpenShareModal()"
+            class="sm:hidden px-2.5 py-1.5 rounded-xl bg-emerald-600/80 text-emerald-50 border border-emerald-300/40 transition active:scale-95 whitespace-nowrap"
+          >
+            💾 Save Work
+          </button>
+          <button
+            type="button"
+            onclick="openFirstDelegateScoring()"
+            class="px-3 py-1.5 rounded-xl stage-glass-facet hover:border-cyanbeam/50 text-icebeam transition active:scale-95 whitespace-nowrap"
+          >
+            ✦ Scoring Page
+          </button>
+        </div>
+      </div>
+
+      <!-- Delegate Cards Container -->
+      <div id="delegatesContainer" class="space-y-2.5"></div>
+
+      <!-- Empty Filter State -->
+      <div id="emptyDelegatesBox" class="hidden stage-glass rounded-2xl p-8 text-center">
+        <div class="text-2xl text-cyanbeam mb-1.5">✦</div>
+        <h2 class="font-display text-base text-icebeam">No Matching Delegates</h2>
+        <p class="text-xs text-mutedslate mt-1">Adjust your search term or switch back to All (116).</p>
+        <button type="button" onclick="resetSearchAndFilter()" class="mt-3 px-4 py-2 rounded-xl bg-gradient-to-r from-cobalt to-sapphire text-silvermist border border-icebeam/30 text-xs">
+          Show All 116 Delegates
+        </button>
+      </div>
+    </section>
+
+    <!-- DEDICATED CANDIDATE SCORING VIEW (Full-Bleed Flag Backdrop + Theatrical Glass Cards) -->
+    <section id="view-delegate-score" class="hidden space-y-3">
+      <!-- Top Back & Prev/Next Delegate Bar -->
+      <div class="stage-glass rounded-2xl p-2.5 sm:p-3 flex items-center justify-between gap-2">
+        <button
+          type="button"
+          onclick="backToDelegatesList()"
+          class="px-3 py-1.5 rounded-xl stage-glass-facet hover:border-cyanbeam/50 text-icebeam text-xs transition active:scale-95 shrink-0"
+        >
+          ← Back
+        </button>
+
+        <div class="flex items-center gap-1.5 shrink-0">
+          <button
+            type="button"
+            onclick="saveAndOpenShareModal()"
+            class="px-2.5 py-1.5 rounded-xl bg-emerald-600/80 hover:brightness-110 text-emerald-50 border border-emerald-300/40 text-xs transition active:scale-95"
+          >
+            💾 Save
+          </button>
+          <button
+            id="prevDelegateBtn"
+            type="button"
+            onclick="stepDelegateScoring(-1)"
+            class="px-2.5 py-1.5 rounded-xl stage-glass-facet hover:border-cyanbeam/50 text-silvermist text-xs transition active:scale-95"
+          >
+            ← Prev
+          </button>
+          <button
+            id="nextDelegateBtn"
+            type="button"
+            onclick="stepDelegateScoring(1)"
+            class="px-2.5 py-1.5 rounded-xl bg-gradient-to-r from-cobalt to-sapphire hover:brightness-110 text-silvermist border border-icebeam/35 text-xs transition active:scale-95"
+          >
+            Next →
+          </button>
+        </div>
+      </div>
+
+      <!-- Dedicated Delegate Scoring Sheet Container -->
+      <div id="delegateScoringPageContent" class="space-y-3"></div>
+    </section>
+
+    <!-- TAB 2: TOP 30 LEADERBOARD & STANDOUTS -->
+    <section id="view-top30" class="hidden space-y-3.5">
+      <!-- Special Category Standouts -->
+      <div class="stage-glass rounded-2xl p-3.5 sm:p-4">
+        <div class="flex flex-wrap items-center justify-between gap-1 mb-2.5">
+          <h2 class="font-display text-sm sm:text-base text-icebeam">
+            ★ SPECIAL CATEGORY STANDOUTS
+          </h2>
+          <span class="text-[11px] text-mutedslate">Auto-fills from top round score or pick manually</span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+          <div class="stage-glass-facet rounded-xl p-2.5">
+            <label for="standoutCostumeSelect" class="block text-[10px] uppercase tracking-wider text-cyanbeam mb-1">
+              Best National Costume
+            </label>
+            <select id="standoutCostumeSelect" onchange="updateStandoutPick('costume', this.value)" class="w-full bg-stageabyss/90 border border-icebeam/25 rounded-lg px-2 py-1.5 text-xs text-silvermist focus:border-cyanbeam focus:outline-none"></select>
+          </div>
+          <div class="stage-glass-facet rounded-xl p-2.5">
+            <label for="standoutSwimsuitSelect" class="block text-[10px] uppercase tracking-wider text-cyanbeam mb-1">
+              Best in Swimsuit
+            </label>
+            <select id="standoutSwimsuitSelect" onchange="updateStandoutPick('swimsuit', this.value)" class="w-full bg-stageabyss/90 border border-icebeam/25 rounded-lg px-2 py-1.5 text-xs text-silvermist focus:border-cyanbeam focus:outline-none"></select>
+          </div>
+          <div class="stage-glass-facet rounded-xl p-2.5">
+            <label for="standoutGownSelect" class="block text-[10px] uppercase tracking-wider text-icebeam mb-1">
+              Best in Evening Gown
+            </label>
+            <select id="standoutGownSelect" onchange="updateStandoutPick('gown', this.value)" class="w-full bg-stageabyss/90 border border-icebeam/25 rounded-lg px-2 py-1.5 text-xs text-silvermist focus:border-cyanbeam focus:outline-none"></select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Top 30 Leaderboard -->
+      <div class="stage-glass rounded-2xl p-3.5 sm:p-4">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+          <div>
+            <h2 class="font-display text-base sm:text-lg text-icebeam">
+              MY PRE-FINAL TOP 30 LEADERBOARD
+            </h2>
+            <p class="text-xs text-mutedslate">
+              Ranked by Total (/100), then <span class="text-silvermist">Evening Gown</span> tiebreaker, then <span class="text-silvermist">Swimsuit</span>. Cut: <span class="text-cyanbeam">85+ pts</span>.
+            </p>
+          </div>
+          <button
+            type="button"
+            onclick="copyTop30Summary()"
+            class="px-3 py-1.5 rounded-xl bg-gradient-to-r from-cobalt to-sapphire hover:brightness-110 text-silvermist border border-icebeam/35 text-xs transition active:scale-95"
+          >
+            📋 Copy Top 30
+          </button>
+        </div>
+
+        <!-- #30 Fan Vote Slot Override -->
+        <div class="mb-3 stage-glass-facet border-cyanbeam/35 rounded-xl p-2.5 sm:p-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <div class="text-xs text-icebeam">#30 FAN • Global Fan Vote Winner Slot</div>
+            <div class="text-[11px] text-mutedslate">Optional: assign a specific delegate to spot #30</div>
+          </div>
+          <select id="fanVoteSlotSelect" onchange="updateStandoutPick('fanVote', this.value)" class="sm:w-64 bg-stageabyss/90 border border-cyanbeam/40 rounded-lg px-2.5 py-1.5 text-xs text-silvermist focus:outline-none"></select>
+        </div>
+
+        <div id="top30ListContainer" class="space-y-2"></div>
+
+        <!-- Bubble & Dark Horse Alternates (#31 - #35) -->
+        <div class="mt-4 pt-3.5 border-t border-icebeam/15">
+          <h3 class="font-display text-xs uppercase tracking-wider text-icebeam mb-2">
+            Bubble &amp; Dark Horse Alternates (#31 – #35)
+          </h3>
+          <div id="bubbleAlternatesContainer" class="grid grid-cols-1 sm:grid-cols-2 gap-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: EXPORT, IMPORT & WATCH PARTY SHARE -->
+    <section id="view-share" class="hidden space-y-4">
+      <!-- Save Work & Share Code Card -->
+      <div class="stage-glass-highlight rounded-2xl p-4 space-y-3">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h2 class="font-display text-base sm:text-lg text-icebeam">
+              1. SAVE YOUR WORK &amp; SHARE WITH HOST
+            </h2>
+            <p class="text-xs text-mutedslate mt-0.5">
+              Save your scorecard &amp; generate a compact <strong class="text-icebeam">Watch-Party Save Code</strong> to send to the host so they can compare your Top 30!
+            </p>
+          </div>
+          <button
+            type="button"
+            onclick="saveAndOpenShareModal()"
+            class="px-4 py-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-700 hover:brightness-110 text-white border border-emerald-300/45 text-xs font-semibold shadow-md transition active:scale-95"
+          >
+            💾 Save Work &amp; Copy Code
+          </button>
+        </div>
+      </div>
+
+      <!-- Host Watch-Party Top 30 Comparison Dashboard -->
+      <div class="stage-glass rounded-2xl p-4 space-y-3.5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h2 class="font-display text-base sm:text-lg text-icebeam">
+              2. COMPARE WATCH-PARTY TOP 30 FINALISTS
+            </h2>
+            <p class="text-xs text-mutedslate mt-0.5">
+              Paste friends' Save Codes or JSON scorecards below to view everyone's Top 30 finalists side-by-side and find consensus picks.
+            </p>
+          </div>
+          <button
+            type="button"
+            onclick="openImportModal()"
+            class="px-3.5 py-2 rounded-xl bg-gradient-to-r from-cobalt to-sapphire hover:brightness-110 text-silvermist border border-icebeam/35 text-xs transition active:scale-95"
+          >
+            + Add Friend's Saved Scores
+          </button>
+        </div>
+
+        <!-- Saved Friends Chips -->
+        <div id="savedFriendsChips" class="flex flex-wrap items-center gap-2"></div>
+
+        <!-- Consensus & Side-by-Side Comparison Container -->
+        <div id="watchPartyComparisonContainer" class="space-y-3"></div>
+      </div>
+
+      <!-- File & Backup Options -->
+      <div class="stage-glass rounded-2xl p-4 space-y-4">
+        <div>
+          <h2 class="font-display text-sm sm:text-base text-icebeam">
+            FILE BACKUP &amp; RESET
+          </h2>
+          <p class="text-xs text-mutedslate mt-0.5">
+            Your own scorecard saves automatically in your browser. Download a CSV or JSON backup anytime.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+          <button
+            type="button"
+            onclick="exportScoresJson()"
+            class="p-3.5 rounded-xl stage-glass-facet hover:border-cyanbeam/50 text-left transition active:scale-98"
+          >
+            <div class="text-xs text-icebeam">📤 Copy Full JSON Scorecard</div>
+            <div class="text-[11px] text-mutedslate mt-0.5">Copy detailed JSON score sheet</div>
+          </button>
+
+          <button
+            type="button"
+            onclick="downloadScoresCsv()"
+            class="p-3.5 rounded-xl stage-glass-facet hover:border-cyanbeam/50 text-left transition active:scale-98"
+          >
+            <div class="text-xs text-icebeam">📊 Download CSV Spreadsheet</div>
+            <div class="text-[11px] text-mutedslate mt-0.5">Download all 116 delegates &amp; scores as .csv</div>
+          </button>
+
+          <button
+            type="button"
+            onclick="openImportModal()"
+            class="p-3.5 rounded-xl stage-glass-facet hover:border-cyanbeam/50 text-left transition active:scale-98"
+          >
+            <div class="text-xs text-silvermist">📥 Paste Save Code / JSON</div>
+            <div class="text-[11px] text-mutedslate mt-0.5">Add a friend's ballot or restore your own</div>
+          </button>
+
+          <button
+            type="button"
+            onclick="resetAllScoresConfirm()"
+            class="p-3.5 rounded-xl bg-rose-950/50 hover:bg-rose-900/60 border border-rose-400/35 text-left transition active:scale-98"
+          >
+            <div class="text-xs text-rose-200">🗑️ Clear My Scores</div>
+            <div class="text-[11px] text-rose-300/75 mt-0.5">Reset your scores, Top 30 checks, and notes</div>
+          </button>
+        </div>
+
+        <!-- Inline Status / Output Box -->
+        <div id="shareOutputBox" class="hidden rounded-xl stage-glass-facet p-3 text-xs text-silvermist break-all"></div>
+      </div>
+    </section>
+  <div class="max-w-4xl mx-auto px-4 pb-28 pt-4 text-center text-[11px] text-mutedslate">Roster updated to the 116 contestants listed for the November 2026 competition. Countries reported as withdrawn or not participating have been removed. Portraits are included where provided in the original photo archive; countries without a supplied portrait use the built-in country fallback.</div>
+  </main>
+
+  <!-- Fixed Bottom Stage Glass Navigation -->
+  <nav class="fixed bottom-0 inset-x-0 z-30 bg-stagevoid/88 backdrop-blur-xl border-t border-icebeam/15 shadow-2xl">
+    <div class="max-w-4xl mx-auto grid grid-cols-3 gap-1.5 p-1.5">
+      <button id="tabBtn-score" type="button" onclick="switchView('score')" class="py-2 px-2 rounded-xl bg-gradient-to-r from-cobalt to-sapphire text-silvermist border border-icebeam/35 text-xs flex items-center justify-center transition">
+        <span>📋 Score (116)</span>
+      </button>
+      <button id="tabBtn-top30" type="button" onclick="switchView('top30')" class="py-2 px-2 rounded-xl stage-glass-facet text-mutedslate hover:text-silvermist text-xs flex items-center justify-center transition">
+        <span>👑 Top 30</span>
+      </button>
+      <button id="tabBtn-share" type="button" onclick="switchView('share')" class="py-2 px-2 rounded-xl stage-glass-facet text-mutedslate hover:text-silvermist text-xs flex items-center justify-center transition">
+        <span>💾 Save &amp; Compare</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Save Work & Share Code Modal -->
+  <div id="saveShareModal" class="hidden fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="stage-glass rounded-2xl max-w-md w-full p-5 space-y-3.5">
+      <div class="flex items-center justify-between gap-2">
+        <h3 class="font-display text-base text-icebeam">💾 Work Saved &amp; Ready to Share</h3>
+        <button type="button" onclick="closeSaveShareModal()" class="text-mutedslate hover:text-silvermist">✕</button>
+      </div>
+
+      <p class="text-xs text-silvermist leading-relaxed">
+        Your progress is saved as <strong id="saveModalJudgeLabel" class="text-cyanbeam">Watch Party Judge</strong>. Copy your <strong class="text-icebeam">Save Code</strong> below and text/message it to the watch-party host so they can compare your Top 30 finalists!
+      </p>
+
+      <div>
+        <div class="flex items-center justify-between text-[11px] text-mutedslate mb-1">
+          <span>Your Compact Watch-Party Save Code</span>
+          <span id="saveModalSummaryCount" class="text-cyanbeam">0 scored</span>
+        </div>
+        <textarea
+          id="saveCodeOutput"
+          rows="4"
+          readonly
+          onclick="this.select()"
+          class="w-full stage-glass-facet rounded-xl p-2.5 text-[11px] font-mono text-icebeam focus:outline-none select-all"
+        ></textarea>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+        <button
+          type="button"
+          onclick="copyGeneratedSaveCode()"
+          class="py-2.5 px-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-700 hover:brightness-110 text-white border border-emerald-300/45 text-xs font-semibold transition active:scale-95"
+        >
+          📋 Copy Save Code
+        </button>
+        <button
+          type="button"
+          onclick="copyTop30Summary()"
+          class="py-2.5 px-3 rounded-xl stage-glass-facet hover:border-cyanbeam/50 text-icebeam text-xs transition active:scale-95"
+        >
+          👑 Copy Top 30 Text List
+        </button>
+      </div>
+
+      <div class="pt-1 border-t border-icebeam/15 flex items-center justify-between gap-2">
+        <button
+          type="button"
+          onclick="closeSaveShareModal(); switchView('share');"
+          class="text-xs text-cyanbeam hover:text-icebeam underline"
+        >
+          Open Compare Top 30 Tab →
+        </button>
+        <button
+          type="button"
+          onclick="closeSaveShareModal()"
+          class="px-4 py-1.5 rounded-xl bg-gradient-to-r from-cobalt to-sapphire text-silvermist border border-icebeam/35 text-xs"
+        >
+          Done
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Official Logo Customizer Modal -->
+  <div id="logoModal" class="hidden fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="stage-glass rounded-2xl max-w-sm w-full p-5 space-y-3">
+      <div class="flex items-center justify-between">
+        <h3 class="font-display text-sm text-icebeam">75th Miss Universe Official Star Logo</h3>
+        <button type="button" onclick="closeLogoModal()" class="text-mutedslate hover:text-silvermist">✕</button>
+      </div>
+      <div class="flex flex-col items-center gap-2 py-2">
+        <div id="logoModalPreview" class="w-24 h-24 rounded-2xl stage-glass-facet p-3 flex items-center justify-center"></div>
+        <span class="text-[11px] text-mutedslate">Official MU75 Star Emblem</span>
+      </div>
+      <label class="block w-full py-2 px-3 rounded-xl stage-glass-facet hover:border-cyanbeam/50 text-icebeam text-xs text-center cursor-pointer transition">
+        Upload Custom Logo Image
+        <input type="file" accept="image/*" onchange="handleLogoFileChange(event)" class="hidden" />
+      </label>
+      <div class="flex items-center justify-between pt-1 gap-2">
+        <button type="button" onclick="resetDefaultLogo()" class="px-3 py-2 rounded-xl stage-glass-facet text-mutedslate hover:text-silvermist text-xs">Reset Star SVG</button>
+        <button type="button" onclick="closeLogoModal()" class="px-4 py-2 rounded-xl bg-gradient-to-r from-cobalt to-sapphire text-silvermist border border-icebeam/35 text-xs">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Import Save Code / JSON Modal -->
+  <div id="importModal" class="hidden fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="stage-glass rounded-2xl max-w-md w-full p-5 space-y-3">
+      <div class="flex items-center justify-between">
+        <h3 class="font-display text-sm text-icebeam">Load Friend's Saved Scorecard</h3>
+        <button type="button" onclick="closeImportModal()" class="text-mutedslate hover:text-silvermist">✕</button>
+      </div>
+      <p class="text-xs text-mutedslate">
+        Paste a friend's <strong class="text-icebeam">MU75-SAVE:...</strong> code or exported JSON below. You can add it to the <strong class="text-cyanbeam">Watch-Party Comparison</strong> or replace your own active ballot.
+      </p>
+      <textarea
+        id="importJsonInput"
+        rows="5"
+        placeholder='Paste MU75-SAVE:... code or {"judgeName":"Friend","scores":{...}}'
+        class="w-full stage-glass-facet focus:border-cyanbeam rounded-xl p-2.5 text-xs font-mono text-silvermist focus:outline-none"
+      ></textarea>
+      <div class="flex flex-wrap justify-end gap-2">
+        <button type="button" onclick="closeImportModal()" class="px-3 py-2 rounded-xl stage-glass-facet text-mutedslate text-xs">Cancel</button>
+        <button type="button" onclick="importScoresFromJson('replace')" class="px-3 py-2 rounded-xl stage-glass-facet hover:border-cyanbeam/50 text-icebeam text-xs">Load as My Ballot</button>
+        <button type="button" onclick="importScoresFromJson('compare')" class="px-3.5 py-2 rounded-xl bg-gradient-to-r from-cobalt to-sapphire text-silvermist border border-icebeam/35 text-xs font-semibold">+ Add to Comparison</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Banner -->
+  <div id="toast" class="fixed top-16 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 transition-opacity duration-200 max-w-[90vw]">
+    <div id="toastMessage" class="px-4 py-2 rounded-full bg-stageabyss/95 backdrop-blur-md text-icebeam text-xs shadow-xl border border-cyanbeam/45 truncate"></div>
+  </div>
+
+  <!-- Judge Name Modal -->
+  <div id="judgeModal" class="hidden fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="stage-glass rounded-2xl max-w-sm w-full p-5 space-y-3">
+      <div class="flex items-center justify-between">
+        <h3 class="font-display text-sm text-icebeam">Watch-Party Judge Name</h3>
+        <button type="button" onclick="closeJudgeModal()" class="text-mutedslate hover:text-silvermist">✕</button>
+      </div>
+      <p class="text-xs text-mutedslate">This name appears on your saved ballots and Top 30 comparisons.</p>
+      <input
+        id="judgeNameInput"
+        type="text"
+        placeholder="Enter your name..."
+        class="w-full stage-glass-facet focus:border-cyanbeam rounded-xl px-3 py-2 text-xs text-silvermist focus:outline-none"
+      />
+      <div class="flex justify-end gap-2 pt-1">
+        <button type="button" onclick="closeJudgeModal()" class="px-3.5 py-2 rounded-xl stage-glass-facet text-mutedslate text-xs">Cancel</button>
+        <button type="button" onclick="saveJudgeName()" class="px-4 py-2 rounded-xl bg-gradient-to-r from-cobalt to-sapphire text-silvermist border border-icebeam/35 text-xs font-semibold">Save Name</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // =========================================================================
+    // 1. ALL 116 DELEGATES FROM THE V5 SCORE SHEET IN EXACT #1 TO #116 ORDER
+    // =========================================================================
+    const RAW_DELEGATES_V5 = [
+      [1, "Albania", "Jogersa Beqiri", "🇦🇱", "al"],
+      [2, "Argentina", "Daiana Stefani Pereyra", "🇦🇷", "ar"],
+      [3, "Armenia", "Arena Zeynalian", "🇦🇲", "am"],
+      [4, "Aruba", "Elizabeth Johnson", "🇦🇼", "aw"],
+      [5, "Australia", "Caitlin Worthington", "🇦🇺", "au"],
+      [6, "Bahamas", "Shawndra Henfield", "🇧🇸", "bs"],
+      [7, "Bangladesh", "Samira Khan Mahi", "🇧🇩", "bd"],
+      [8, "Belarus", "Aliya Karotkaya", "🇧🇾", "by"],
+      [9, "Belgium", "Olga Lombardo", "🇧🇪", "be"],
+      [10, "Belize", "Caleigh-Rose West", "🇧🇿", "bz"],
+      [11, "Bolivia", "Valeria Mena", "🇧🇴", "bo"],
+      [12, "Bonaire", "Caroline Porras", "🇧🇶", "bq"],
+      [13, "Botswana", "Dabilo Moses", "🇧🇼", "bw"],
+      [14, "Brazil", "Marcella Kozinski de Barros", "🇧🇷", "br"],
+      [15, "British Virgin Islands", "Orealia Eugenie Thomas", "🇻🇬", "vg"],
+      [16, "Cambodia", "Rthna Than", "🇰🇭", "kh"],
+      [17, "Cameroon", "Audrey Black", "🇨🇲", "cm"],
+      [18, "Canada", "Aslihan Morali", "🇨🇦", "ca"],
+      [19, "Cape Verde", "Armandina Cunha", "🇨🇻", "cv"],
+      [20, "Cayman Islands", "Juliana May Myers", "🇰🇾", "ky"],
+      [21, "Chile", "Dominga López", "🇨🇱", "cl"],
+      [22, "China", "Shiqi Wang", "🇨🇳", "cn"],
+      [23, "Colombia", "Maria Alejandra Lopez Perez", "🇨🇴", "co"],
+      [24, "Costa Rica", "María Alejandra “Mariale” Acosta García", "🇨🇷", "cr"],
+      [25, "Croatia", "Antea Mršić", "🇭🇷", "hr"],
+      [26, "Cuba", "Mia Dio", "🇨🇺", "cu"],
+      [27, "Curaçao", "Bianty Rojer Gomperts", "🇨🇼", "cw"],
+      [28, "Czech Republic", "Dominika Kotoučková", "🇨🇿", "cz"],
+      [29, "DR Congo", "Jessi Kalambayi", "🇨🇩", "cd"],
+      [30, "Denmark", "Fie Rose Lindegaard", "🇩🇰", "dk"],
+      [31, "Dominican Republic", "Melissa Núñez", "🇩🇴", "do"],
+      [32, "Ecuador", "Dalia Bucaram", "🇪🇨", "ec"],
+      [33, "Egypt", "Sonia Gergis", "🇪🇬", "eg"],
+      [34, "El Salvador", "Sofia Cordova", "🇸🇻", "sv"],
+      [35, "Equatorial Guinea", "Isabel Mbomio", "🇬🇶", "gq"],
+      [36, "Estonia", "Emili Denneng", "🇪🇪", "ee"],
+      [37, "Ethiopia", "Bruktawit Belete Woldeyes", "🇪🇹", "et"],
+      [38, "Finland", "Veera Grönlund", "🇫🇮", "fi"],
+      [39, "France", "Garance Authié", "🇫🇷", "fr"],
+      [40, "Germany", "Celina Weil", "🇩🇪", "de"],
+      [41, "Ghana", "Belvy Ofori", "🇬🇭", "gh"],
+      [42, "Great Britain", "Angela Pitao Aumonier", "🇬🇧", "gb"],
+      [43, "Greece", "Olivia Vasilopoulos", "🇬🇷", "gr"],
+      [44, "Guadeloupe", "Chloé Deher", "🇬🇵", "gp"],
+      [45, "Guatemala", "María Adelina Castillo Birba", "🇬🇹", "gt"],
+      [46, "Guinea", "Justine Kamara", "🇬🇳", "gn"],
+      [47, "Guyana", "Angel Bhathal", "🇬🇾", "gy"],
+      [48, "Haiti", "Tatenda Rameau", "🇭🇹", "ht"],
+      [49, "Honduras", "Luisa Pineda", "🇭🇳", "hn"],
+      [50, "Hong Kong", "Jennifer Zhou", "🇭🇰", "hk"],
+      [51, "Hungary", "Kiss Kamila", "🇭🇺", "hu"],
+      [52, "Iceland", "Sigríður Hrafnkelsdóttir", "🇮🇸", "is"],
+      [53, "India", "Kaziah Liz Mejo", "🇮🇳", "in"],
+      [54, "Iraq", "Samantha Slewa", "🇮🇶", "iq"],
+      [55, "Ireland", "Aideen Howard", "🇮🇪", "ie"],
+      [56, "Israel", "Danielle Sophie Yablonka", "🇮🇱", "il"],
+      [57, "Italy", "Giada Folcia", "🇮🇹", "it"],
+      [58, "Jamaica", "Celene Hall", "🇯🇲", "jm"],
+      [59, "Japan", "Sayuki Ito", "🇯🇵", "jp"],
+      [60, "Jordan", "Destiny Anbar", "🇯🇴", "jo"],
+      [61, "Kazakhstan", "Alina Ekaterinecheva", "🇰🇿", "kz"],
+      [62, "Kenya", "Jean Ojiro", "🇰🇪", "ke"],
+      [63, "Kosovo", "Evisa Pacolli", "🇽🇰", "xk"],
+      [64, "Kyrgyzstan", "Medina Ermekova", "🇰🇬", "kg"],
+      [65, "Latvia", "Lasma Kuhtarska", "🇱🇻", "lv"],
+      [66, "Lebanon", "Perla Harb", "🇱🇧", "lb"],
+      [67, "Lithuania", "Olga Bykadorova", "🇱🇹", "lt"],
+      [68, "Macau", "Xuhe Hou", "🇲🇴", "mo"],
+      [69, "Malta", "Francesca Mercieca", "🇲🇹", "mt"],
+      [70, "Martinique", "Larissa Ségarel", "🇲🇶", "mq"],
+      [71, "Mayotte", "Maëva Toumbou Dani", "🇾🇹", "yt"],
+      [72, "Mexico", "María Vargas", "🇲🇽", "mx"],
+      [73, "Moldova", "Dorina Darii", "🇲🇩", "md"],
+      [74, "Mongolia", "Enkhdelgerekh Enkhbold", "🇲🇳", "mn"],
+      [75, "Montenegro", "Aleksandra Ivezaj", "🇲🇪", "me"],
+      [76, "Myanmar", "May Grace Parry", "🇲🇲", "mm"],
+      [77, "Namibia", "Charene Labuschagne", "🇳🇦", "na"],
+      [78, "Netherlands", "Melissa Bottema", "🇳🇱", "nl"],
+      [79, "New Zealand", "Georgia Waddington", "🇳🇿", "nz"],
+      [80, "Nicaragua", "Jasmine Blandford", "🇳🇮", "ni"],
+      [81, "Nigeria", "Danielle Fadeke Adewusi", "🇳🇬", "ng"],
+      [82, "Norway", "Abelone Smedsrud", "🇳🇴", "no"],
+      [83, "Pakistan", "Misbah Arshad", "🇵🇰", "pk"],
+      [84, "Panama", "Gabriela González", "🇵🇦", "pa"],
+      [85, "Paraguay", "Gretha Matiauda", "🇵🇾", "py"],
+      [86, "Peru", "Luren Leticia Márquez Canales", "🇵🇪", "pe"],
+      [87, "Philippines", "Beatrice Rebecca “Bea” Millan Windorski", "🇵🇭", "ph"],
+      [88, "Poland", "Vivica Lewandowski", "🇵🇱", "pl"],
+      [89, "Portugal", "Isabela Santos", "🇵🇹", "pt"],
+      [90, "Puerto Rico", "Jennifer Abreu Mora de Barreto", "🇵🇷", "pr"],
+      [91, "Réunion", "Abigaëlle Tailamée", "🇷🇪", "re"],
+      [92, "Romania", "Sabina Parmac", "🇷🇴", "ro"],
+      [93, "Russia", "Alexandra Stashkevich", "🇷🇺", "ru"],
+      [94, "Saint Lucia", "Bernella Velinor", "🇱🇨", "lc"],
+      [95, "Saint Martin", "Elle Duncan", "🇲🇫", "mf"],
+      [96, "Serbia", "Nikolina Vujičić", "🇷🇸", "rs"],
+      [97, "Sierra Leone", "Katti Fofanah", "🇸🇱", "sl"],
+      [98, "Slovakia", "Anna Lickova", "🇸🇰", "sk"],
+      [99, "South Africa", "Bajabulise Thela", "🇿🇦", "za"],
+      [100, "South Korea", "Kim Yurim", "🇰🇷", "kr"],
+      [101, "Spain", "Susana Medina", "🇪🇸", "es"],
+      [102, "Sri Lanka", "Nimhara Sasindi", "🇱🇰", "lk"],
+      [103, "Suriname", "Maruschka Sahiboe", "🇸🇷", "sr"],
+      [104, "Sweden", "Josefin Strand", "🇸🇪", "se"],
+      [105, "Switzerland", "Itiya Dube", "🇨🇭", "ch"],
+      [106, "Tanzania", "Elizabeth Makune", "🇹🇿", "tz"],
+      [107, "Trinidad and Tobago", "Vinita Manoo", "🇹🇹", "tt"],
+      [108, "Tunisia", "Sarrah Brahmi", "🇹🇳", "tn"],
+      [109, "Turks and Caicos", "Selena Grant", "🇹🇨", "tc"],
+      [110, "Uganda", "Mitchelle Daka", "🇺🇬", "ug"],
+      [111, "Ukraine", "Anna Nikonova", "🇺🇦", "ua"],
+      [112, "United States", "Justus Anye Coleman Kelley", "🇺🇸", "us"],
+      [113, "U.S. Virgin Islands", "Jenna-Monét Queeley", "🇻🇮", "vi"],
+      [114, "Uruguay", "Lucía Piñeyro", "🇺🇾", "uy"],
+      [115, "Uzbekistan", "Ziedakhon Sharipova", "🇺🇿", "uz"],
+      [116, "Venezuela", "Clara Federica Vegas Goetz", "🇻🇪", "ve"]
+    ];
+
+    const ARCHIVE_PHOTO_BY_COUNTRY = {
+      "Argentina": "Miss Universe/Argentina.jpg",
+      "Armenia": "Miss Universe/Armenia.jpg",
+      "Aruba": "Miss Universe/Aruba.jpg",
+      "Australia": "Miss Universe/Australia.jpg",
+      "Belarus": "Miss Universe/Belarus.jpg",
+      "Belgium": "Miss Universe/Belgium.jpg",
+      "Belize": "Miss Universe/Belize.jpg",
+      "Bolivia": "Miss Universe/Bolivia.jpg",
+      "Bonaire": "Miss Universe/Bonaire.jpg",
+      "Botswana": "Miss Universe/Botswana.jpg",
+      "Brazil": "Miss Universe/Brazil.jpg",
+      "British Virgin Islands": "Miss Universe/British Virgin Islands.jpg",
+      "Cambodia": "Miss Universe/Cambodia.jpg",
+      "Cameroon": "Miss Universe/Cameroon.jpg",
+      "Canada": "Miss Universe/Canada.jpg",
+      "Cape Verde": "Miss Universe/Cabo Verde.jpg",
+      "Cayman Islands": "Miss Universe/Cayman Islands.jpg",
+      "Chile": "Miss Universe/Chile.jpg",
+      "China": "Miss Universe/China.jpg",
+      "Colombia": "Miss Universe/Colombia.jpg",
+      "Costa Rica": "Miss Universe/Costa Rica.jpg",
+      "Croatia": "Miss Universe/Croatia.jpg",
+      "Cuba": "Miss Universe/Cuba.jpg",
+      "Curaçao": "Miss Universe/Curacao.jpg",
+      "Czech Republic": "Miss Universe/Czech Republic.jpg",
+      "Denmark": "Miss Universe/Denmark.jpg",
+      "Dominican Republic": "Miss Universe/Dominican Republic.jpg",
+      "DR Congo": "Miss Universe/DRC.jpg",
+      "Ecuador": "Miss Universe/Ecuador.jpg",
+      "Equatorial Guinea": "Miss Universe/Ecuatorial Guinea.jpg",
+      "Estonia": "Miss Universe/Estonia.jpg",
+      "Ethiopia": "Miss Universe/Ethiopia.jpg",
+      "Finland": "Miss Universe/Finland.jpg",
+      "France": "Miss Universe/France.jpg",
+      "Germany": "Miss Universe/Germany.jpg",
+      "Great Britain": "Miss Universe/Great Britain.jpg",
+      "Greece": "Miss Universe/Greece.jpg",
+      "Guadeloupe": "Miss Universe/Guadaloupe.jpg",
+      "Guatemala": "Miss Universe/Guatemala.jpg",
+      "Guinea": "Miss Universe/Guinea.jpg",
+      "Guyana": "Miss Universe/Guyana.jpg",
+      "Haiti": "Miss Universe/Haiti.jpg",
+      "Honduras": "Miss Universe/Honduras.jpg",
+      "Hungary": "Miss Universe/Hungary.jpg",
+      "Iceland": "Miss Universe/Iceland.jpg",
+      "India": "Miss Universe/India.jpg",
+      "Iraq": "Miss Universe/Iraq.jpg",
+      "Ireland": "Miss Universe/Ireland.jpg",
+      "Israel": "Miss Universe/Israel.jpg",
+      "Italy": "Miss Universe/Italy.jpg",
+      "Jamaica": "Miss Universe/Jamaica.jpg",
+      "Japan": "Miss Universe/Japan.jpg",
+      "Kazakhstan": "Miss Universe/Kazakhstan.jpg",
+      "Kenya": "Miss Universe/Kenya.jpg",
+      "Kosovo": "Miss Universe/Kosovo.jpg",
+      "Kyrgyzstan": "Miss Universe/Kyrgyzstan.jpg",
+      "Latvia": "Miss Universe/Latvia.jpg",
+      "Lebanon": "Miss Universe/Lebanon.jpg",
+      "Lithuania": "Miss Universe/Lithuania.jpg",
+      "Macau": "Miss Universe/Macau.jpg",
+      "Malta": "Miss Universe/Malta.jpg",
+      "Martinique": "Miss Universe/Martinique.jpg",
+      "Mayotte": "Miss Universe/Mayotte.jpg",
+      "Mexico": "Miss Universe/Mexico.jpg",
+      "Mongolia": "Miss Universe/Mongolia.jpg",
+      "Montenegro": "Miss Universe/Montenegro.jpg",
+      "Myanmar": "Miss Universe/Myanmar.jpg",
+      "Namibia": "Miss Universe/Namibia.jpg",
+      "New Zealand": "Miss Universe/New Zealand.jpg",
+      "Nicaragua": "Miss Universe/Nicaragua.jpg",
+      "Nigeria": "Miss Universe/Nigeria.jpg",
+      "Norway": "Miss Universe/Norway.jpg",
+      "Pakistan": "Miss Universe/Pakistan.jpg",
+      "Panama": "Miss Universe/Panama.jpg",
+      "Paraguay": "Miss Universe/Paraguay.jpg",
+      "Peru": "Miss Universe/Peru.jpg",
+      "Philippines": "Miss Universe/Philippines.jpg",
+      "Poland": "Miss Universe/Poland.jpg",
+      "Portugal": "Miss Universe/Portugal.jpg",
+      "Puerto Rico": "Miss Universe/Puerto Rico.jpg",
+      "Réunion": "Miss Universe/Reunion Island.jpg",
+      "Romania": "Miss Universe/Romania.jpg",
+      "Saint Lucia": "Miss Universe/Saint Lucia.jpg",
+      "Saint Martin": "Miss Universe/Saint-Martin.jpg",
+      "Serbia": "Miss Universe/Serbia.jpg",
+      "Slovakia": "Miss Universe/Slovakia.jpg",
+      "South Africa": "Miss Universe/South Africa.jpg",
+      "Spain": "Miss Universe/Spain.jpg",
+      "Sri Lanka": "Miss Universe/Sri Lanka.jpg",
+      "Suriname": "Miss Universe/Suriname.jpg",
+      "Sweden": "Miss Universe/Sweden.jpg",
+      "Switzerland": "Miss Universe/Switzerland.jpg",
+      "Bahamas": "Miss Universe/The Bahamas.jpg",
+      "Trinidad and Tobago": "Miss Universe/Trinidad and Tobago.jpg",
+      "Tunisia": "Miss Universe/Tunisia.jpg",
+      "Turks and Caicos": "Miss Universe/Turks and Caicos.jpg",
+      "U.S. Virgin Islands": "Miss Universe/U.S. Virgin Islands.jpg",
+      "Uganda": "Miss Universe/Uganda.jpg",
+      "Ukraine": "Miss Universe/Ukraine.jpg",
+      "Uruguay": "Miss Universe/Uruguay.jpg",
+      "United States": "Miss Universe/USA.jpg",
+      "Uzbekistan": "Miss Universe/Uzbekistan.jpg",
+      "Venezuela": "Miss Universe/Venezuela.jpg"
+    };
+
+    // High-resolution candidate portraits provided in chat (Argentina_3.jpg .. Botswana_3.jpg)
+    const PROVIDED_PORTRAITS_BY_COUNTRY = {};
+
+    const DELEGATES = RAW_DELEGATES_V5.map(([num, country, rawName, flag, iso2]) => {
+      const id = String(num);
+      const padded = String(num).padStart(3, '0');
+      const cleanedName = String(rawName || '').replace(/^Delegate\s+/i, '').trim();
+      const name = cleanedName || 'Name not confirmed';
+      const flagUrl = iso2 ? `https://flagcdn.com/w320/${iso2.toLowerCase()}.png` : '';
+      const flagHdUrl = iso2 ? `https://flagcdn.com/w1280/${iso2.toLowerCase()}.png` : '';
+      const archivePhotoUrl = PROVIDED_PORTRAITS_BY_COUNTRY[country] || ARCHIVE_PHOTO_BY_COUNTRY[country] || '';
+      return { id, num, padded, country, name, flag, iso2, flagUrl, flagHdUrl, archivePhotoUrl };
+    });
+
+    const DEFAULT_MU75_LOGO_SVG = `
+      <svg class="w-full h-full" viewBox="0 0 80 80" fill="none" aria-label="75th Miss Universe Official Star Logo">
+        <defs>
+          <linearGradient id="mu75LogoMain" x1="18" y1="6" x2="72" y2="56" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#93E5FF" />
+            <stop offset="48%" stop-color="#38BDF8" />
+            <stop offset="100%" stop-color="#1475C7" />
+          </linearGradient>
+          <linearGradient id="mu75LogoSub" x1="8" y1="54" x2="26" y2="74" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#93E5FF" />
+            <stop offset="100%" stop-color="#1475C7" />
+          </linearGradient>
+        </defs>
+        <path
+          d="M44 2L47.2 26.2L68 13L50.4 30.8L75 34L50.4 37.2L63.5 54L47.2 41.8L44 60L40.8 41.8L23 54L37.6 37.2L16 34L37.6 30.8L25 14L40.8 26.2L44 2Z"
+          fill="url(#mu75LogoMain)"
+        />
+        <circle cx="44" cy="34" r="3.2" fill="#E6F1FA" fill-opacity="0.92" />
+        <path
+          d="M17 53L18.4 62.6L26 64L18.4 65.4L17 75L15.6 65.4L8 64L15.6 62.6L17 53Z"
+          fill="url(#mu75LogoSub)"
+        />
+      </svg>
+    `;
+
+    // =========================================================================
+    // 2. STATE & LOCAL STORAGE PERSISTENCE
+    // =========================================================================
+    const STORAGE_KEY = 'mu75_v5_watchparty_scoresheet_v1';
+
+    const appState = {
+      judgeName: 'Watch Party Judge',
+      activeView: 'score',
+      activeDelegateId: '1',
+      searchQuery: '',
+      filter: 'all',
+      scores: {}, // { [id]: { ncCraft, ncStage, swWalk, swConf, swStyle, egGown, egGrace, egGlam, top30, notes } }
+      photos: {}, // { [id]: customUrlOrDataUrl }
+      customLogoDataUrl: '',
+      standouts: { costume: '', swimsuit: '', gown: '', fanVote: '' },
+      friendBallots: [] // [{ judgeName, savedAt, scores, standouts }]
+    };
+
+    function loadSavedState() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return;
+        const data = JSON.parse(raw);
+        if (data.judgeName) appState.judgeName = String(data.judgeName);
+        if (data.scores && typeof data.scores === 'object') appState.scores = data.scores;
+        if (data.photos && typeof data.photos === 'object') appState.photos = data.photos;
+        if (typeof data.customLogoDataUrl === 'string') appState.customLogoDataUrl = data.customLogoDataUrl;
+        if (Array.isArray(data.friendBallots)) appState.friendBallots = data.friendBallots;
+        if (data.standouts && typeof data.standouts === 'object') {
+          appState.standouts = { ...appState.standouts, ...data.standouts };
+        }
+      } catch (err) {
+        console.error('Failed to load saved score sheet:', err);
+      }
+    }
+
+    function saveStateToStorage() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({
+          judgeName: appState.judgeName,
+          scores: appState.scores,
+          photos: appState.photos,
+          customLogoDataUrl: appState.customLogoDataUrl,
+          friendBallots: appState.friendBallots,
+          standouts: appState.standouts
+        }));
+      } catch (err) {
+        console.error('Failed to save score sheet to localStorage:', err);
+      }
+    }
+
+    function getComputedScoreFromMap(scoresMap, id) {
+      const raw = (scoresMap && scoresMap[id]) || {};
+      const ncCraft = clampNum(raw.ncCraft, 0, 15);
+      const ncStage = clampNum(raw.ncStage, 0, 15);
+      const swWalk = clampNum(raw.swWalk, 0, 15);
+      const swConf = clampNum(raw.swConf, 0, 15);
+      const swStyle = clampNum(raw.swStyle, 0, 5);
+      const egGown = clampNum(raw.egGown, 0, 15);
+      const egGrace = clampNum(raw.egGrace, 0, 15);
+      const egGlam = clampNum(raw.egGlam, 0, 5);
+
+      const costumePts = ncCraft + ncStage; // /30
+      const swimsuitPts = swWalk + swConf + swStyle; // /35
+      const gownPts = egGown + egGrace + egGlam; // /35
+      const totalPts = costumePts + swimsuitPts + gownPts; // /100
+      const notes = typeof raw.notes === 'string' ? raw.notes : '';
+      const top30 = Boolean(raw.top30);
+      const hasEntry = totalPts > 0 || top30 || notes.trim().length > 0;
+
+      return {
+        ncCraft, ncStage,
+        swWalk, swConf, swStyle,
+        egGown, egGrace, egGlam,
+        costumePts, swimsuitPts, gownPts, totalPts,
+        top30, notes, hasEntry
+      };
+    }
+
+    function getComputedScore(id) {
+      return getComputedScoreFromMap(appState.scores, id);
+    }
+
+    function clampNum(val, min, max) {
+      const n = Number(val);
+      if (Number.isNaN(n)) return min;
+      return Math.max(min, Math.min(max, Math.round(n)));
+    }
+
+    // =========================================================================
+    // 3. OFFICIAL LOGO & FULL-BLEED FLAG BACKDROP HELPERS
+    // =========================================================================
+    function renderBrandLogo() {
+      const container = document.getElementById('headerLogoContainer');
+      const preview = document.getElementById('logoModalPreview');
+      const markup = appState.customLogoDataUrl
+        ? `<img src="${appState.customLogoDataUrl}" alt="75th Miss Universe Official Logo" class="w-full h-full object-contain rounded-lg" />`
+        : DEFAULT_MU75_LOGO_SVG;
+      if (container) container.innerHTML = markup;
+      if (preview) preview.innerHTML = markup;
+    }
+
+    function openLogoModal() {
+      renderBrandLogo();
+      document.getElementById('logoModal').classList.remove('hidden');
+    }
+
+    function closeLogoModal() {
+      document.getElementById('logoModal').classList.add('hidden');
+    }
+
+    function handleLogoFileChange(event) {
+      const file = event.target.files?.[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const img = new Image();
+        img.onload = () => {
+          const canvas = document.createElement('canvas');
+          const maxSide = 220;
+          const ratio = Math.min(maxSide / img.width, maxSide / img.height, 1);
+          canvas.width = Math.max(1, Math.round(img.width * ratio));
+          canvas.height = Math.max(1, Math.round(img.height * ratio));
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+          appState.customLogoDataUrl = canvas.toDataURL('image/png');
+          saveStateToStorage();
+          renderBrandLogo();
+          showToast('Updated MU75 logo');
+        };
+        img.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function resetDefaultLogo() {
+      appState.customLogoDataUrl = '';
+      saveStateToStorage();
+      renderBrandLogo();
+      showToast('Restored official MU75 star SVG');
+    }
+
+    function toggleScheduleStrip() {
+      document.getElementById('mobileScheduleStrip').classList.toggle('hidden');
+    }
+
+    function buildStageCountryFallback(delegate) {
+      const safeFlag = escapeXml(delegate.flag || '🌐');
+      const safeNum = escapeXml(`#${delegate.num}`);
+      const safeCode = escapeXml((delegate.iso2 || delegate.country.slice(0, 3)).toUpperCase());
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="320" height="200" viewBox="0 0 320 200">
+        <defs>
+          <linearGradient id="stageCardGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#0E223D"/>
+            <stop offset="55%" stop-color="#091322"/>
+            <stop offset="100%" stop-color="#0B3C6D"/>
+          </linearGradient>
+        </defs>
+        <rect width="320" height="200" rx="14" fill="url(#stageCardGrad)"/>
+        <rect x="4" y="4" width="312" height="192" rx="11" fill="none" stroke="#38BDF8" stroke-opacity="0.35" stroke-width="1.5"/>
+        <text x="160" y="90" font-size="54" text-anchor="middle" dominant-baseline="middle">${safeFlag}</text>
+        <text x="160" y="152" font-family="monospace" font-size="15" font-weight="bold" fill="#93E5FF" text-anchor="middle">${safeNum} • ${safeCode}</text>
+      </svg>`;
+      return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+    }
+
+    function getDelegateAvatarSrc(delegate) {
+      if (PROVIDED_PORTRAITS_BY_COUNTRY[delegate.country]) {
+        return PROVIDED_PORTRAITS_BY_COUNTRY[delegate.country];
+      }
+      if (delegate.archivePhotoUrl) return delegate.archivePhotoUrl;
+      return buildStageCountryFallback(delegate);
+    }
+
+    function getFlagGlassBackground(delegate) {
+      const flagSrc = delegate.flagUrl || buildStageCountryFallback(delegate);
+      return `url("${flagSrc}")`;
+    }
+
+    function handleAvatarError(imgEl, delegateId) {
+      // Prevent an endless onerror loop: imgEl.src is an absolute URL even when
+      // the HTML contains a relative path, so comparing it to archivePhotoUrl
+      // can otherwise keep retrying the same broken image forever.
+      const delegate = DELEGATES.find(d => d.id === String(delegateId));
+      if (!delegate || !imgEl || imgEl.dataset.fallbackAttempted === 'true') return;
+      imgEl.dataset.fallbackAttempted = 'true';
+      imgEl.onerror = null;
+      imgEl.src = buildStageCountryFallback(delegate);
+      imgEl.classList.add('avatar-fallback');
+    }
+
+    function syncDelegateFlagBackdrop(delegate) {
+      const backdrop = document.getElementById('delegateFlagBackdrop');
+      const img = document.getElementById('delegateFlagBackdropImg');
+      if (!backdrop || !img) return;
+      if (!delegate) {
+        backdrop.classList.remove('active');
+        return;
+      }
+      const src = delegate.flagHdUrl || delegate.flagUrl || buildStageCountryFallback(delegate);
+      if (img.dataset.currentDelegate === delegate.id && img.getAttribute('src')) {
+        backdrop.classList.add('active');
+        return;
+      }
+      img.dataset.currentDelegate = delegate.id;
+      img.onerror = () => {
+        img.onerror = null;
+        img.src = buildStageCountryFallback(delegate);
+      };
+      img.src = src;
+      backdrop.classList.add('active');
+    }
+
+    // =========================================================================
+    // 4. SCORING, DEDICATED SCORING PAGE & UNCROWDED LIST RENDERING
+    // =========================================================================
+    function getFieldMax(field) {
+      if (field === 'swStyle' || field === 'egGlam') return 5;
+      return 15;
+    }
+
+    function updateScoreField(id, field, value) {
+      if (!appState.scores[id]) appState.scores[id] = {};
+      appState.scores[id][field] = clampNum(value, 0, getFieldMax(field));
+      saveStateToStorage();
+      syncCardSummary(id);
+      syncDedicatedScoringPage(id);
+      updateScoredProgressBadge();
+    }
+
+    function toggleTop30Check(id, event) {
+      if (event) event.stopPropagation();
+      if (!appState.scores[id]) appState.scores[id] = {};
+      appState.scores[id].top30 = !appState.scores[id].top30;
+      saveStateToStorage();
+      syncCardSummary(id);
+      syncDedicatedScoringPage(id);
+      updateScoredProgressBadge();
+      showToast(appState.scores[id].top30 ? `#${id} marked for Top 30` : `#${id} removed from Top 30`);
+    }
+
+    function updateDelegateNotes(id, value) {
+      if (!appState.scores[id]) appState.scores[id] = {};
+      appState.scores[id].notes = value;
+      saveStateToStorage();
+      updateScoredProgressBadge();
+    }
+
+    function openDelegateScoringPage(id, event) {
+      if (event) event.stopPropagation();
+      const target = DELEGATES.find(d => d.id === String(id)) || DELEGATES[0];
+      appState.activeDelegateId = target.id;
+      switchView('delegate-score');
+    }
+
+    function openFirstDelegateScoring() {
+      const targetId = appState.activeDelegateId || '1';
+      openDelegateScoringPage(targetId);
+    }
+
+    function backToDelegatesList() {
+      switchView('score');
+    }
+
+    function stepDelegateScoring(delta) {
+      const idx = DELEGATES.findIndex(d => d.id === appState.activeDelegateId);
+      const currentIndex = idx >= 0 ? idx : 0;
+      const nextIndex = (currentIndex + delta + DELEGATES.length) % DELEGATES.length;
+      appState.activeDelegateId = DELEGATES[nextIndex].id;
+      renderDedicatedScoringPage();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function syncCardSummary(id) {
+      const s = getComputedScore(id);
+      const totalEl = document.getElementById(`total-pts-${id}`);
+      const ncEl = document.getElementById(`costume-pts-${id}`);
+      const swEl = document.getElementById(`swimsuit-pts-${id}`);
+      const egEl = document.getElementById(`gown-pts-${id}`);
+      const cutBadge = document.getElementById(`cut85-badge-${id}`);
+      const checkBtn = document.getElementById(`top30-btn-${id}`);
+      const cardEl = document.getElementById(`delegate-card-${id}`);
+
+      if (totalEl) totalEl.textContent = s.totalPts;
+      if (ncEl) ncEl.textContent = `${s.costumePts}/30`;
+      if (swEl) swEl.textContent = `${s.swimsuitPts}/35`;
+      if (egEl) egEl.textContent = `${s.gownPts}/35`;
+
+      if (cutBadge) {
+        cutBadge.classList.toggle('hidden', s.totalPts < 85);
+      }
+
+      if (checkBtn) {
+        checkBtn.textContent = s.top30 ? '★ Top 30' : '+ Top 30';
+        checkBtn.className = s.top30
+          ? 'px-2 py-0.5 rounded-md text-[11px] bg-gradient-to-r from-cobalt to-sapphire text-silvermist border border-icebeam/30 transition active:scale-95'
+          : 'px-2 py-0.5 rounded-md text-[11px] stage-glass-facet text-mutedslate hover:text-silvermist transition active:scale-95';
+      }
+
+      if (cardEl) {
+        const isHighlighted = s.totalPts >= 85 || s.top30;
+        cardEl.className = isHighlighted
+          ? 'stage-glass-highlight rounded-2xl overflow-hidden transition cursor-pointer'
+          : 'stage-glass rounded-2xl overflow-hidden transition cursor-pointer';
+      }
+    }
+
+    function syncDedicatedScoringPage(id) {
+      if (String(id) !== String(appState.activeDelegateId)) return;
+      const s = getComputedScore(id);
+      const pageTotal = document.getElementById('page-total-pts');
+      const pageNc = document.getElementById('page-nc-pts');
+      const pageSw = document.getElementById('page-sw-pts');
+      const pageEg = document.getElementById('page-eg-pts');
+      const pageTop30Btn = document.getElementById('page-top30-btn');
+
+      if (pageTotal) pageTotal.textContent = s.totalPts;
+      if (pageNc) pageNc.textContent = `${s.costumePts}/30`;
+      if (pageSw) pageSw.textContent = `${s.swimsuitPts}/35`;
+      if (pageEg) pageEg.textContent = `${s.gownPts}/35`;
+
+      if (pageTop30Btn) {
+        pageTop30Btn.textContent = s.top30 ? '★ Checked for Top 30' : '☐ Add to Top 30';
+        pageTop30Btn.className = s.top30
+          ? 'px-3 py-1.5 rounded-xl text-xs bg-gradient-to-r from-cobalt to-sapphire text-silvermist border border-icebeam/35 transition active:scale-95'
+          : 'px-3 py-1.5 rounded-xl text-xs stage-glass-facet text-icebeam hover:border-cyanbeam/50 transition active:scale-95';
+      }
+
+      const fields = ['ncCraft', 'ncStage', 'swWalk', 'swConf', 'swStyle', 'egGown', 'egGrace', 'egGlam'];
+      fields.forEach(f => {
+        const labelEl = document.getElementById(`page-val-${f}`);
+        if (labelEl) labelEl.textContent = s[f];
+      });
+    }
+
+    function renderDedicatedScoringPage() {
+      const container = document.getElementById('delegateScoringPageContent');
+      if (!container) return;
+      const d = DELEGATES.find(item => item.id === String(appState.activeDelegateId)) || DELEGATES[0];
+      appState.activeDelegateId = d.id;
+      syncDelegateFlagBackdrop(d);
+      const s = getComputedScore(d.id);
+
+      container.innerHTML = `
+        <!-- Big Candidate Portrait with Flag Shining Through Glass Effect -->
+        <div class="stage-glass rounded-2xl p-4 space-y-3">
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+            <div class="flex items-start gap-3.5 min-w-0">
+              <div
+                style="background-image: ${getFlagGlassBackground(d)};"
+                class="flag-glass-portrait relative w-28 h-36 sm:w-40 sm:h-48 rounded-2xl shrink-0 border border-cyanbeam/50 shadow-lg"
+              >
+                <img
+                  id="country-showcase-img-${d.id}"
+                  src="${getDelegateAvatarSrc(d)}"
+                  alt="${escapeHtml(d.name)}"
+                  onerror="handleAvatarError(this, '${d.id}')"
+                  class="w-full h-full object-cover object-[50%_18%]"
+                />
+                <span class="absolute top-1.5 left-1.5 z-10 px-1.5 py-0.5 rounded bg-stagevoid/85 text-[10px] font-mono text-icebeam border border-icebeam/25">
+                  #${d.num}
+                </span>
+              </div>
+
+              <div class="min-w-0">
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="text-sm leading-none">${d.flag}</span>
+                  <span class="text-[11px] font-mono text-cyanbeam tracking-wide">DELEGATE #${d.num} OF 116</span>
+                </div>
+                <h2 class="font-display text-xl sm:text-2xl text-icebeam uppercase truncate mt-0.5">
+                  ${escapeHtml(d.country)}
+                </h2>
+                <div class="mt-0.5 text-sm sm:text-base text-silvermist truncate">
+                  ${escapeHtml(d.name)}
+                </div>
+              </div>
+            </div>
+
+            <div class="text-right shrink-0 stage-glass-facet rounded-2xl px-3.5 py-2 self-start">
+              <span id="page-total-pts" class="text-2xl sm:text-3xl text-icebeam">${s.totalPts}</span>
+              <span class="text-xs text-mutedslate">/100</span>
+            </div>
+          </div>
+
+          <div class="pt-2.5 border-t border-icebeam/15 flex flex-wrap items-center justify-between gap-2 text-xs">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="px-2.5 py-1 rounded-lg stage-glass-facet text-mutedslate">
+                Costume: <strong id="page-nc-pts" class="text-cyanbeam">${s.costumePts}/30</strong>
+              </span>
+              <span class="px-2.5 py-1 rounded-lg stage-glass-facet text-mutedslate">
+                Swimsuit: <strong id="page-sw-pts" class="text-cyanbeam">${s.swimsuitPts}/35</strong>
+              </span>
+              <span class="px-2.5 py-1 rounded-lg stage-glass-facet text-mutedslate">
+                Gown: <strong id="page-eg-pts" class="text-icebeam">${s.gownPts}/35</strong>
+              </span>
+            </div>
+
+            <button
+              id="page-top30-btn"
+              type="button"
+              onclick="toggleTop30Check('${d.id}', event)"
+              class="${s.top30
+                ? 'px-3 py-1.5 rounded-xl text-xs bg-gradient-to-r from-cobalt to-sapphire text-silvermist border border-icebeam/35 transition active:scale-95'
+                : 'px-3 py-1.5 rounded-xl text-xs stage-glass-facet text-icebeam hover:border-cyanbeam/50 transition active:scale-95'}"
+            >
+              ${s.top30 ? '★ Checked for Top 30' : '☐ Add to Top 30'}
+            </button>
+          </div>
+        </div>
+
+        <!-- 1. National Costume (30 pts) -->
+        <div class="stage-glass rounded-2xl p-4 space-y-3.5">
+          <div class="flex items-center justify-between gap-2">
+            <h3 class="font-display text-base sm:text-lg uppercase text-cyanbeam">
+              1. National Costume (30 Pts)
+            </h3>
+            <span class="text-xs text-mutedslate">Nov 21 • Craft (15) + Stage (15)</span>
+          </div>
+          ${renderPageSliderRow(d.id, 'ncCraft', 'Craftsmanship & Design (Artistry, detail, storytelling)', s.ncCraft, 15, false)}
+          ${renderPageSliderRow(d.id, 'ncStage', 'Stage Projection (Confidence, movement, impact)', s.ncStage, 15, false)}
+        </div>
+
+        <!-- 2. Swimsuit (35 pts) -->
+        <div class="stage-glass rounded-2xl p-4 space-y-3.5">
+          <div class="flex items-center justify-between gap-2">
+            <h3 class="font-display text-base sm:text-lg uppercase text-cyanbeam">
+              2. Swimsuit Round (35 Pts)
+            </h3>
+            <span class="text-xs text-mutedslate">Nov 22 • Walk (15) + Conf. (15) + Fit (5)</span>
+          </div>
+          ${renderPageSliderRow(d.id, 'swWalk', 'Runway Walk (Pace, turns, energy, poise)', s.swWalk, 15, false)}
+          ${renderPageSliderRow(d.id, 'swConf', 'Confidence & Presence (Charisma, stage command)', s.swConf, 15, false)}
+          ${renderPageSliderRow(d.id, 'swStyle', 'Styling & Fit (Swimsuit look & hair)', s.swStyle, 5, false)}
+        </div>
+
+        <!-- 3. Evening Gown (35 pts) -->
+        <div class="stage-glass-highlight rounded-2xl p-4 space-y-3.5">
+          <div class="flex items-center justify-between gap-2">
+            <h3 class="font-display text-base sm:text-lg uppercase text-icebeam">
+              3. Evening Gown (35 Pts • Tiebreaker)
+            </h3>
+            <span class="text-xs text-mutedslate">Nov 22 • Gown (15) + Grace (15) + Glam (5)</span>
+          </div>
+          ${renderPageSliderRow(d.id, 'egGown', 'Gown & Fit (Silhouette, movement, fabric)', s.egGown, 15, true)}
+          ${renderPageSliderRow(d.id, 'egGrace', 'Grace & Elegance (Regal poise & command)', s.egGrace, 15, true)}
+          ${renderPageSliderRow(d.id, 'egGlam', 'Glam & Styling (Hair, makeup & jewelry)', s.egGlam, 5, true)}
+        </div>
+
+        <!-- Runway, Gown & Styling Notes -->
+        <div class="stage-glass rounded-2xl p-4">
+          <label for="page-notes-${d.id}" class="block font-display text-base uppercase text-icebeam mb-1.5">
+            Runway, Gown &amp; Styling Notes
+          </label>
+          <textarea
+            id="page-notes-${d.id}"
+            rows="3"
+            oninput="updateDelegateNotes('${d.id}', this.value)"
+            placeholder="Write notes on costume, walk, evening gown, styling, or Top 30 potential..."
+            class="w-full stage-glass-facet focus:border-cyanbeam rounded-xl p-3 text-sm text-silvermist placeholder-mutedslate focus:outline-none leading-relaxed transition"
+          >${escapeHtml(s.notes)}</textarea>
+        </div>
+      `;
+    }
+
+    function renderPageSliderRow(id, field, label, currentVal, maxVal, isGown) {
+      return `
+        <div>
+          <div class="flex items-center justify-between text-xs sm:text-sm mb-1.5 gap-2">
+            <span class="text-silvermist leading-snug">${label}</span>
+            <span class="font-mono text-icebeam shrink-0">
+              <span id="page-val-${field}">${currentVal}</span>/${maxVal}
+            </span>
+          </div>
+          <input
+            type="range"
+            min="0"
+            max="${maxVal}"
+            step="1"
+            value="${currentVal}"
+            oninput="updateScoreField('${id}', '${field}', this.value)"
+            class="w-full ${isGown ? 'gown-slider' : ''}"
+          />
+        </div>
+      `;
+    }
+
+    function renderDelegatesList() {
+      const container = document.getElementById('delegatesContainer');
+      const emptyBox = document.getElementById('emptyDelegatesBox');
+      if (!container || !emptyBox) return;
+      const q = appState.searchQuery.trim().toLowerCase();
+
+      const filtered = DELEGATES.filter(d => {
+        const s = getComputedScore(d.id);
+        const matchesSearch = !q ||
+          d.country.toLowerCase().includes(q) ||
+          d.name.toLowerCase().includes(q) ||
+          String(d.num) === q ||
+          d.padded.includes(q);
+        if (!matchesSearch) return false;
+
+        if (appState.filter === 'scored') return s.hasEntry;
+        if (appState.filter === 'unscored') return !s.hasEntry;
+        if (appState.filter === 'top30') return s.top30;
+        if (appState.filter === 'cut85') return s.totalPts >= 85;
+        return true;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = '';
+        emptyBox.classList.remove('hidden');
+        return;
+      }
+
+      emptyBox.classList.add('hidden');
+      container.innerHTML = filtered.map(d => {
+        const s = getComputedScore(d.id);
+        const isHighlighted = s.totalPts >= 85 || s.top30;
+        const cardClass = isHighlighted
+          ? 'stage-glass-highlight rounded-2xl overflow-hidden transition cursor-pointer'
+          : 'stage-glass rounded-2xl overflow-hidden transition cursor-pointer';
+
+        return `
+          <article id="delegate-card-${d.id}" onclick="openDelegateScoringPage('${d.id}', event)" class="${cardClass}">
+            <div class="p-3 flex items-center gap-3">
+              <!-- Candidate Portrait over Country Flag Glass Effect -->
+              <div
+                style="background-image: ${getFlagGlassBackground(d)};"
+                class="flag-glass-portrait relative w-16 h-20 sm:w-20 sm:h-24 rounded-xl shrink-0 border border-cyanbeam/40"
+              >
+                <img
+                  id="avatar-img-${d.id}"
+                  src="${getDelegateAvatarSrc(d)}"
+                  alt="${escapeHtml(d.name)}"
+                  loading="lazy"
+                  onerror="handleAvatarError(this, '${d.id}')"
+                  class="w-full h-full object-cover object-[50%_18%]"
+                />
+                <span class="absolute top-0.5 left-0.5 z-10 px-1 rounded bg-stagevoid/85 text-[10px] font-mono text-icebeam border border-icebeam/20">
+                  #${d.num}
+                </span>
+              </div>
+
+              <!-- Country, Candidate Name & Round Summary -->
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-1.5">
+                  <span class="text-sm leading-none">${d.flag}</span>
+                  <h2 class="font-display text-base sm:text-lg text-icebeam uppercase truncate">
+                    ${escapeHtml(d.country)}
+                  </h2>
+                  <span id="cut85-badge-${d.id}" class="${s.totalPts >= 85 ? '' : 'hidden'} text-[10px] px-1.5 py-0.5 rounded bg-cobalt/50 text-icebeam border border-cyanbeam/50 shrink-0">
+                    85+
+                  </span>
+                </div>
+                <div class="text-xs sm:text-sm text-silvermist truncate mt-0.5">
+                  ${escapeHtml(d.name)}
+                </div>
+                <div class="flex items-center gap-2 mt-1.5 text-[11px] text-mutedslate">
+                  <span class="truncate">
+                    NC <strong id="costume-pts-${d.id}" class="text-cyanbeam">${s.costumePts}/30</strong> •
+                    SW <strong id="swimsuit-pts-${d.id}" class="text-cyanbeam">${s.swimsuitPts}/35</strong> •
+                    EG <strong id="gown-pts-${d.id}" class="text-icebeam">${s.gownPts}/35</strong>
+                  </span>
+                  <button
+                    id="top30-btn-${d.id}"
+                    type="button"
+                    onclick="toggleTop30Check('${d.id}', event)"
+                    class="ml-auto shrink-0 ${s.top30
+                      ? 'px-2 py-0.5 rounded-md text-[11px] bg-gradient-to-r from-cobalt to-sapphire text-silvermist border border-icebeam/30 transition active:scale-95'
+                      : 'px-2 py-0.5 rounded-md text-[11px] stage-glass-facet text-mutedslate hover:text-silvermist transition active:scale-95'}"
+                  >
+                    ${s.top30 ? '★ Top 30' : '+ Top 30'}
+                  </button>
+                </div>
+              </div>
+
+              <!-- Total Score & Arrow -->
+              <div class="flex flex-col items-end justify-center gap-0.5 shrink-0 pl-1">
+                <div class="text-right leading-none">
+                  <span id="total-pts-${d.id}" class="text-lg sm:text-2xl text-icebeam">${s.totalPts}</span>
+                  <span class="text-[11px] sm:text-xs text-mutedslate">/100</span>
+                </div>
+                <span class="text-[11px] text-cyanbeam">Score →</span>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    // =========================================================================
+    // 5. TOP 30 LEADERBOARD WITH EVENING GOWN > SWIMSUIT TIEBREAKER
+    // =========================================================================
+    function getSortedLeaderboardForBallot(scoresMap) {
+      return DELEGATES.map(d => ({
+        ...d,
+        score: getComputedScoreFromMap(scoresMap, d.id)
+      })).sort((a, b) => {
+        if (b.score.totalPts !== a.score.totalPts) return b.score.totalPts - a.score.totalPts;
+        if (b.score.gownPts !== a.score.gownPts) return b.score.gownPts - a.score.gownPts;
+        if (b.score.swimsuitPts !== a.score.swimsuitPts) return b.score.swimsuitPts - a.score.swimsuitPts;
+        if (b.score.costumePts !== a.score.costumePts) return b.score.costumePts - a.score.costumePts;
+        return a.num - b.num;
+      });
+    }
+
+    function getSortedLeaderboard() {
+      return getSortedLeaderboardForBallot(appState.scores);
+    }
+
+    function buildTop30EntriesForBallot(sortedList, standoutsObj) {
+      const fanId = standoutsObj && standoutsObj.fanVote ? String(standoutsObj.fanVote) : '';
+      const pool = fanId
+        ? sortedList.filter(item => item.id !== fanId)
+        : sortedList;
+      const top29 = pool.slice(0, fanId ? 29 : 30);
+      if (!fanId) return top29;
+      const fanDelegate = sortedList.find(item => item.id === fanId);
+      return fanDelegate ? [...top29, fanDelegate] : sortedList.slice(0, 30);
+    }
+
+    function buildTop30Entries(sortedList) {
+      return buildTop30EntriesForBallot(sortedList, appState.standouts);
+    }
+
+    function renderTop30View() {
+      const sorted = getSortedLeaderboard();
+
+      const delegateOpts = `<option value="">-- Select Delegate --</option>` +
+        DELEGATES.map(d => `<option value="${d.id}">#${d.num} • ${escapeHtml(d.country)} — ${escapeHtml(d.name)}</option>`).join('');
+
+      ['standoutCostumeSelect', 'standoutSwimsuitSelect', 'standoutGownSelect'].forEach(selId => {
+        const el = document.getElementById(selId);
+        if (el) el.innerHTML = delegateOpts;
+      });
+
+      const fanSelect = document.getElementById('fanVoteSlotSelect');
+      if (fanSelect) {
+        fanSelect.innerHTML = `<option value="">-- Auto (#30 by Score &amp; Tiebreaker) --</option>` +
+          DELEGATES.map(d => `<option value="${d.id}">#${d.num} • ${escapeHtml(d.country)} — ${escapeHtml(d.name)}</option>`).join('');
+      }
+
+      const bestCostume = [...sorted].sort((a, b) => b.score.costumePts - a.score.costumePts)[0];
+      const bestSwim = [...sorted].sort((a, b) => b.score.swimsuitPts - a.score.swimsuitPts)[0];
+      const bestGown = [...sorted].sort((a, b) => b.score.gownPts - a.score.gownPts)[0];
+
+      document.getElementById('standoutCostumeSelect').value =
+        appState.standouts.costume || (bestCostume && bestCostume.score.costumePts > 0 ? bestCostume.id : '');
+      document.getElementById('standoutSwimsuitSelect').value =
+        appState.standouts.swimsuit || (bestSwim && bestSwim.score.swimsuitPts > 0 ? bestSwim.id : '');
+      document.getElementById('standoutGownSelect').value =
+        appState.standouts.gown || (bestGown && bestGown.score.gownPts > 0 ? bestGown.id : '');
+      document.getElementById('fanVoteSlotSelect').value = appState.standouts.fanVote || '';
+
+      const top30 = buildTop30Entries(sorted);
+      const listEl = document.getElementById('top30ListContainer');
+
+      listEl.innerHTML = top30.map((d, index) => {
+        const rank = index + 1;
+        let tierLabel = `#${rank}`;
+        let badgeClass = 'stage-glass-facet text-icebeam';
+        let rowClass = 'stage-glass-facet';
+
+        if (rank === 1) {
+          tierLabel = '#1 ★';
+          badgeClass = 'bg-gradient-to-r from-cobalt to-sapphire text-silvermist border-icebeam/45';
+          rowClass = 'stage-glass-highlight';
+        } else if (rank <= 5) {
+          tierLabel = `#${rank} T5`;
+          badgeClass = 'bg-sapphire/60 text-icebeam border-cyanbeam/45';
+          rowClass = 'stage-glass';
+        } else if (rank <= 12) {
+          tierLabel = `#${rank} T12`;
+          badgeClass = 'bg-cobalt/35 text-cyanbeam border-cyanbeam/35';
+        } else if (rank === 30 && appState.standouts.fanVote) {
+          tierLabel = '#30 FAN';
+          badgeClass = 'bg-cobalt text-silvermist border-icebeam/40';
+        }
+
+        return `
+          <div onclick="openDelegateScoringPage('${d.id}')" class="rounded-xl p-2 ${rowClass} flex items-center justify-between gap-2 cursor-pointer hover:border-cyanbeam/50 transition">
+            <div class="flex items-center gap-2 min-w-0">
+              <span class="px-1.5 py-0.5 rounded-md border text-[10px] shrink-0 ${badgeClass}">
+                ${tierLabel}
+              </span>
+              <img
+                src="${getDelegateAvatarSrc(d)}"
+                alt="${escapeHtml(d.name)}"
+                onerror="handleAvatarError(this, '${d.id}')"
+                class="w-9 h-7 rounded-lg object-cover border border-icebeam/25 shrink-0"
+              />
+              <div class="min-w-0">
+                <div class="text-xs text-silvermist truncate">${d.flag} ${escapeHtml(d.country)} <span class="text-mutedslate">#${d.num}</span></div>
+                <div class="text-[11px] text-mutedslate truncate">${escapeHtml(d.name)}</div>
+              </div>
+            </div>
+            <div class="text-right shrink-0">
+              <div class="text-sm text-icebeam">${d.score.totalPts}<span class="text-[10px] text-mutedslate">/100</span></div>
+              <div class="text-[10px] text-mutedslate">EG:${d.score.gownPts} • SW:${d.score.swimsuitPts}</div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      const top30Ids = new Set(top30.map(item => item.id));
+      const alternates = sorted.filter(item => !top30Ids.has(item.id)).slice(0, 5);
+      document.getElementById('bubbleAlternatesContainer').innerHTML = alternates.map((d, idx) => `
+        <div onclick="openDelegateScoringPage('${d.id}')" class="rounded-xl stage-glass-facet px-3 py-2 flex items-center justify-between gap-2 text-xs cursor-pointer hover:border-cyanbeam/45 transition">
+          <div class="min-w-0">
+            <span class="font-mono text-cyanbeam mr-1">#${31 + idx}</span>
+            <span class="text-silvermist">${d.flag} ${escapeHtml(d.country)}</span>
+            <span class="text-mutedslate text-[11px] block truncate pl-6">${escapeHtml(d.name)}</span>
+          </div>
+          <span class="text-icebeam shrink-0">${d.score.totalPts}/100</span>
+        </div>
+      `).join('');
+    }
+
+    function updateStandoutPick(key, delegateId) {
+      appState.standouts[key] = delegateId;
+      saveStateToStorage();
+      renderTop30View();
+      showToast('Updated leaderboard selection');
+    }
+
+    // =========================================================================
+    // 6. VIEW NAVIGATION, FILTERS, MODALS & JSON/CSV EXPORT/IMPORT
+    // =========================================================================
+    function switchView(viewName) {
+      appState.activeView = viewName;
+      ['score', 'delegate-score', 'top30', 'share'].forEach(name => {
+        const el = document.getElementById(`view-${name}`);
+        if (el) el.classList.toggle('hidden', name !== viewName);
+      });
+
+      const activeNavTab = viewName === 'delegate-score' ? 'score' : viewName;
+      ['score', 'top30', 'share'].forEach(name => {
+        const btn = document.getElementById(`tabBtn-${name}`);
+        if (btn) {
+          btn.className = name === activeNavTab
+            ? 'py-2 px-2 rounded-xl bg-gradient-to-r from-cobalt to-sapphire text-silvermist border border-icebeam/35 text-xs flex items-center justify-center transition'
+            : 'py-2 px-2 rounded-xl stage-glass-facet text-mutedslate hover:text-silvermist text-xs flex items-center justify-center transition';
+        }
+      });
+
+      const controlsBar = document.getElementById('scoreControlsBar');
+      if (controlsBar) controlsBar.classList.toggle('hidden', viewName !== 'score');
+      if (viewName === 'delegate-score') {
+        renderDedicatedScoringPage();
+      } else {
+        syncDelegateFlagBackdrop(null);
+      }
+      if (viewName === 'top30') renderTop30View();
+      if (viewName === 'share') renderWatchPartyComparison();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function handleSearchInput(val) {
+      appState.searchQuery = val;
+      document.getElementById('clearSearchBtn').classList.toggle('hidden', !val);
+      renderDelegatesList();
+    }
+
+    function clearSearchInput() {
+      appState.searchQuery = '';
+      const input = document.getElementById('delegateSearchInput');
+      if (input) input.value = '';
+      document.getElementById('clearSearchBtn').classList.add('hidden');
+      renderDelegatesList();
+    }
+
+    function setActiveFilter(filterName) {
+      appState.filter = filterName;
+      document.querySelectorAll('.filter-chip').forEach(btn => {
+        const active = btn.dataset.filter === filterName;
+        btn.className = active
+          ? 'filter-chip px-3 py-1.5 rounded-full text-xs bg-gradient-to-r from-cobalt to-sapphire text-silvermist border border-icebeam/35 whitespace-nowrap transition'
+          : 'filter-chip px-3 py-1.5 rounded-full text-xs stage-glass-facet text-mutedslate hover:text-silvermist whitespace-nowrap transition';
+      });
+      renderDelegatesList();
+    }
+
+    function resetSearchAndFilter() {
+      clearSearchInput();
+      setActiveFilter('all');
+    }
+
+    function updateScoredProgressBadge() {
+      const count = DELEGATES.filter(d => getComputedScore(d.id).hasEntry).length;
+      const badge = document.getElementById('scoredProgressText');
+      if (badge) badge.textContent = `${count}/116`;
+    }
+
+    // Judge Modal
+    function openJudgeModal() {
+      document.getElementById('judgeNameInput').value = appState.judgeName;
+      document.getElementById('judgeModal').classList.remove('hidden');
+    }
+    function closeJudgeModal() {
+      document.getElementById('judgeModal').classList.add('hidden');
+    }
+    function saveJudgeName() {
+      const val = document.getElementById('judgeNameInput').value.trim();
+      if (val) {
+        appState.judgeName = val;
+        document.getElementById('headerJudgeName').textContent = val;
+        saveStateToStorage();
+        showToast(`Judge set to "${val}"`);
+      }
+      closeJudgeModal();
+    }
+
+    // Save Work & Share Code Helpers
+    function encodeUtf8Base64(str) {
+      const bytes = new TextEncoder().encode(str);
+      let bin = '';
+      for (let i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+      return btoa(bin);
+    }
+
+    function decodeUtf8Base64(b64) {
+      const bin = atob(b64);
+      const bytes = new Uint8Array(bin.length);
+      for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+      return new TextDecoder().decode(bytes);
+    }
+
+    function buildCompactSaveCode() {
+      const compactScores = {};
+      Object.entries(appState.scores).forEach(([id, raw]) => {
+        const s = getComputedScore(id);
+        if (s.hasEntry) {
+          compactScores[id] = [
+            s.ncCraft, s.ncStage,
+            s.swWalk, s.swConf, s.swStyle,
+            s.egGown, s.egGrace, s.egGlam,
+            s.top30 ? 1 : 0,
+            s.notes || ''
+          ];
+        }
+      });
+      const payload = {
+        v: 1,
+        j: appState.judgeName,
+        t: new Date().toISOString(),
+        s: compactScores,
+        p: appState.standouts
+      };
+      return 'MU75-SAVE:' + encodeUtf8Base64(JSON.stringify(payload));
+    }
+
+    function parseBallotInput(rawText) {
+      const trimmed = rawText.trim();
+      if (trimmed.startsWith('MU75-SAVE:')) {
+        const encoded = trimmed.slice('MU75-SAVE:'.length).trim();
+        const parsed = JSON.parse(decodeUtf8Base64(encoded));
+        if (!parsed || typeof parsed !== 'object' || typeof parsed.s !== 'object') {
+          throw new Error('Invalid save code');
+        }
+        const restoredScores = {};
+        Object.entries(parsed.s).forEach(([id, arr]) => {
+          if (Array.isArray(arr)) {
+            restoredScores[id] = {
+              ncCraft: arr[0] || 0,
+              ncStage: arr[1] || 0,
+              swWalk: arr[2] || 0,
+              swConf: arr[3] || 0,
+              swStyle: arr[4] || 0,
+              egGown: arr[5] || 0,
+              egGrace: arr[6] || 0,
+              egGlam: arr[7] || 0,
+              top30: Boolean(arr[8]),
+              notes: typeof arr[9] === 'string' ? arr[9] : ''
+            };
+          }
+        });
+        return {
+          judgeName: String(parsed.j || 'Friend'),
+          savedAt: parsed.t || new Date().toISOString(),
+          scores: restoredScores,
+          standouts: parsed.p && typeof parsed.p === 'object'
+            ? { costume: '', swimsuit: '', gown: '', fanVote: '', ...parsed.p }
+            : { costume: '', swimsuit: '', gown: '', fanVote: '' }
+        };
+      }
+
+      const parsedJson = JSON.parse(trimmed);
+      if (!parsedJson || typeof parsedJson !== 'object' || typeof parsedJson.scores !== 'object') {
+        throw new Error('Invalid JSON structure');
+      }
+      return {
+        judgeName: String(parsedJson.judgeName || 'Friend'),
+        savedAt: parsedJson.exportedAt || new Date().toISOString(),
+        scores: parsedJson.scores,
+        standouts: parsedJson.standouts && typeof parsedJson.standouts === 'object'
+          ? { costume: '', swimsuit: '', gown: '', fanVote: '', ...parsedJson.standouts }
+          : { costume: '', swimsuit: '', gown: '', fanVote: '' }
+      };
+    }
+
+    function saveAndOpenShareModal() {
+      saveStateToStorage();
+      const scoredCount = DELEGATES.filter(d => getComputedScore(d.id).hasEntry).length;
+      const code = buildCompactSaveCode();
+      document.getElementById('saveModalJudgeLabel').textContent = appState.judgeName;
+      document.getElementById('saveModalSummaryCount').textContent = `${scoredCount}/116 scored`;
+      document.getElementById('saveCodeOutput').value = code;
+      document.getElementById('saveShareModal').classList.remove('hidden');
+      showToast('Progress saved!');
+    }
+
+    function closeSaveShareModal() {
+      document.getElementById('saveShareModal').classList.add('hidden');
+    }
+
+    function copyGeneratedSaveCode() {
+      const code = document.getElementById('saveCodeOutput')?.value || buildCompactSaveCode();
+      copyToClipboard(code, 'Save code copied — send it to the host!');
+    }
+
+    function removeFriendBallot(index) {
+      appState.friendBallots.splice(index, 1);
+      saveStateToStorage();
+      renderWatchPartyComparison();
+      showToast('Removed friend scorecard');
+    }
+
+    function renderWatchPartyComparison() {
+      const chipsEl = document.getElementById('savedFriendsChips');
+      const container = document.getElementById('watchPartyComparisonContainer');
+      if (!chipsEl || !container) return;
+
+      const allBallots = [
+        {
+          judgeName: `${appState.judgeName} (You)`,
+          scores: appState.scores,
+          standouts: appState.standouts,
+          isHost: true
+        },
+        ...appState.friendBallots.map((b, idx) => ({ ...b, friendIndex: idx, isHost: false }))
+      ];
+
+      chipsEl.innerHTML = allBallots.map(b => `
+        <div class="px-3 py-1.5 rounded-full text-xs flex items-center gap-2 ${b.isHost ? 'bg-gradient-to-r from-cobalt to-sapphire text-silvermist border border-icebeam/35' : 'stage-glass-facet text-icebeam'}">
+          <span>${b.isHost ? '👑' : '👤'} ${escapeHtml(b.judgeName)}</span>
+          ${!b.isHost ? `<button type="button" onclick="removeFriendBallot(${b.friendIndex})" class="text-mutedslate hover:text-rose-300 font-bold" title="Remove">✕</button>` : ''}
+        </div>
+      `).join('');
+
+      if (appState.friendBallots.length === 0) {
+        container.innerHTML = `
+          <div class="stage-glass-facet rounded-xl p-4 text-center space-y-2">
+            <div class="text-sm text-icebeam">No friends' scorecards added yet</div>
+            <p class="text-xs text-mutedslate max-w-md mx-auto">
+              Ask your watch-party friends to tap <strong class="text-emerald-300">💾 Save &amp; Share</strong> on their phone and send you their <code class="text-cyanbeam">MU75-SAVE:...</code> code, then click <strong class="text-icebeam">+ Add Friend's Saved Scores</strong> above to compare Top 30 lists!
+            </p>
+          </div>
+        `;
+        return;
+      }
+
+      // Compute Top 30 for each participant and tally consensus overlap
+      const ballotTop30s = allBallots.map(b => {
+        const sorted = getSortedLeaderboardForBallot(b.scores);
+        const top30 = buildTop30EntriesForBallot(sorted, b.standouts);
+        return {
+          ...b,
+          top30,
+          top30Map: new Map(top30.map((d, idx) => [d.id, { rank: idx + 1, pts: d.score.totalPts }]))
+        };
+      });
+
+      const consensusCounts = new Map();
+      ballotTop30s.forEach(b => {
+        b.top30.forEach((d, idx) => {
+          const prev = consensusCounts.get(d.id) || { delegate: d, picks: 0, rankSum: 0, judges: [] };
+          prev.picks += 1;
+          prev.rankSum += idx + 1;
+          prev.judges.push(`${b.judgeName} (#${idx + 1})`);
+          consensusCounts.set(d.id, prev);
+        });
+      });
+
+      const consensusList = Array.from(consensusCounts.values())
+        .sort((a, b) => (b.picks - a.picks) || (a.rankSum - b.rankSum))
+        .slice(0, 30);
+
+      container.innerHTML = `
+        <!-- Consensus Top 30 Overlap -->
+        <div class="stage-glass-facet rounded-xl p-3 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-cyanbeam uppercase tracking-wider">
+              ★ Watch-Party Consensus Top 30 (${allBallots.length} Judges)
+            </span>
+            <span class="text-[11px] text-mutedslate">Sorted by most Top 30 picks</span>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+            ${consensusList.map((item, i) => `
+              <div class="rounded-lg bg-stageabyss/80 border ${item.picks === allBallots.length ? 'border-cyanbeam/55' : 'border-icebeam/15'} px-2.5 py-1.5 flex items-center justify-between gap-2 text-xs">
+                <div class="min-w-0 truncate">
+                  <span class="font-mono text-cyanbeam mr-1">#${i + 1}</span>
+                  <span class="text-silvermist">${item.delegate.flag} ${escapeHtml(item.delegate.country)}</span>
+                </div>
+                <span class="px-2 py-0.5 rounded bg-cobalt/40 text-icebeam text-[10px] shrink-0">
+                  ${item.picks}/${allBallots.length} Top 30
+                </span>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- Side-by-Side Top 30 Columns -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5">
+          ${ballotTop30s.map(b => `
+            <div class="stage-glass-facet rounded-xl p-3 space-y-1.5">
+              <div class="flex items-center justify-between border-b border-icebeam/15 pb-1.5">
+                <span class="text-xs font-semibold text-icebeam truncate">${b.isHost ? '👑' : '👤'} ${escapeHtml(b.judgeName)}</span>
+                <span class="text-[10px] text-mutedslate">Top 30 Finalists</span>
+              </div>
+              <div class="max-h-72 overflow-y-auto space-y-1 pr-1">
+                ${b.top30.map((d, idx) => {
+                  const inMyTop30 = ballotTop30s[0].top30Map.has(d.id);
+                  return `
+                    <div class="flex items-center justify-between gap-2 text-xs py-1 px-2 rounded ${!b.isHost && inMyTop30 ? 'bg-cobalt/25 border border-cyanbeam/30' : 'bg-stagevoid/50'}">
+                      <span class="truncate text-silvermist">
+                        <span class="font-mono text-cyanbeam mr-1">#${idx + 1}</span>${d.flag} ${escapeHtml(d.country)}
+                      </span>
+                      <span class="font-mono text-[11px] text-icebeam shrink-0">${d.score.totalPts}</span>
+                    </div>
+                  `;
+                }).join('')}
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    // Export / Import Helpers
+    function copyToClipboard(text, successMsg) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => showToast(successMsg)).catch(() => fallbackCopy(text, successMsg));
+      } else {
+        fallbackCopy(text, successMsg);
+      }
+    }
+
+    function fallbackCopy(text, successMsg) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand('copy');
+        showToast(successMsg);
+      } catch (_) {
+        showToast('Copy failed — see output box below');
+      }
+      document.body.removeChild(ta);
+    }
+
+    function exportScoresJson() {
+      const payload = {
+        event: '75th Miss Universe 2026 Preliminary Score Sheet',
+        judgeName: appState.judgeName,
+        exportedAt: new Date().toISOString(),
+        scores: appState.scores,
+        standouts: appState.standouts
+      };
+      const jsonStr = JSON.stringify(payload, null, 2);
+      const box = document.getElementById('shareOutputBox');
+      box.textContent = jsonStr;
+      box.classList.remove('hidden');
+      copyToClipboard(jsonStr, 'JSON scorecard copied');
+    }
+
+    function downloadScoresCsv() {
+      const headers = [
+        'Number', 'Country', 'Delegate', 'Costume_Craft_15', 'Costume_Stage_15', 'Costume_Total_30',
+        'Swim_Walk_15', 'Swim_Conf_15', 'Swim_Style_5', 'Swim_Total_35',
+        'Gown_Design_15', 'Gown_Grace_15', 'Gown_Glam_5', 'Gown_Total_35',
+        'Total_100', 'Top_30_Checked', 'Notes'
+      ];
+      const rows = DELEGATES.map(d => {
+        const s = getComputedScore(d.id);
+        return [
+          d.num, d.country, d.name,
+          s.ncCraft, s.ncStage, s.costumePts,
+          s.swWalk, s.swConf, s.swStyle, s.swimsuitPts,
+          s.egGown, s.egGrace, s.egGlam, s.gownPts,
+          s.totalPts, s.top30 ? 'YES' : 'NO', s.notes
+        ].map(csvEscape).join(',');
+      });
+      const csvContent = [headers.join(','), ...rows].join('\n');
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = '75th-miss-universe-2026-scores.csv';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+      showToast('Downloaded CSV score sheet');
+    }
+
+    function csvEscape(val) {
+      const str = String(val ?? '');
+      if (/[",\n\r]/.test(str)) {
+        return `"${str.replace(/"/g, '""')}"`;
+      }
+      return str;
+    }
+
+    function openImportModal() {
+      document.getElementById('importJsonInput').value = '';
+      document.getElementById('importModal').classList.remove('hidden');
+    }
+    function closeImportModal() {
+      document.getElementById('importModal').classList.add('hidden');
+    }
+    function importScoresFromJson(mode = 'compare') {
+      const rawText = document.getElementById('importJsonInput').value.trim();
+      if (!rawText) return;
+      try {
+        const ballot = parseBallotInput(rawText);
+        if (mode === 'replace') {
+          appState.scores = { ...ballot.scores };
+          appState.standouts = { ...ballot.standouts };
+          if (ballot.judgeName && ballot.judgeName !== 'Friend') {
+            appState.judgeName = ballot.judgeName;
+            document.getElementById('headerJudgeName').textContent = appState.judgeName;
+          }
+          saveStateToStorage();
+          renderDelegatesList();
+          updateScoredProgressBadge();
+          closeImportModal();
+          showToast(`Loaded ${ballot.judgeName}'s scorecard`);
+        } else {
+          const existingIdx = appState.friendBallots.findIndex(
+            f => f.judgeName.toLowerCase() === ballot.judgeName.toLowerCase()
+          );
+          if (existingIdx >= 0) {
+            appState.friendBallots[existingIdx] = ballot;
+          } else {
+            appState.friendBallots.push(ballot);
+          }
+          saveStateToStorage();
+          closeImportModal();
+          switchView('share');
+          showToast(`Added ${ballot.judgeName} to Top 30 comparison!`);
+        }
+      } catch (_) {
+        showToast('Invalid save code or JSON — check formatting');
+      }
+    }
+
+    function copyTop30Summary() {
+      const sorted = getSortedLeaderboard();
+      const top30 = buildTop30Entries(sorted);
+      const lines = [
+        `75th Miss Universe 2026 — My Top 30 (${appState.judgeName})`,
+        ...top30.map((d, i) => `#${i + 1} ${d.country} (${d.name}) — ${d.score.totalPts}/100 [EG:${d.score.gownPts} SW:${d.score.swimsuitPts}]`)
+      ];
+      copyToClipboard(lines.join('\n'), 'Top 30 summary copied');
+    }
+
+    function resetAllScoresConfirm() {
+      const box = document.getElementById('shareOutputBox');
+      if (box.dataset.confirmReset === 'armed') {
+        appState.scores = {};
+        appState.standouts = { costume: '', swimsuit: '', gown: '', fanVote: '' };
+        box.dataset.confirmReset = '';
+        box.classList.add('hidden');
+        saveStateToStorage();
+        renderDelegatesList();
+        updateScoredProgressBadge();
+        showToast('All scores cleared');
+      } else {
+        box.dataset.confirmReset = 'armed';
+        box.innerHTML = 'Click <strong>Clear All Scores</strong> again to confirm wiping all entered scores, Top 30 checks, and notes.';
+        box.classList.remove('hidden');
+      }
+    }
+
+    // =========================================================================
+    // 7. UTILITIES & INITIALIZATION
+    // =========================================================================
+    let toastTimer = null;
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const label = document.getElementById('toastMessage');
+      label.textContent = msg;
+      toast.classList.remove('opacity-0');
+      toast.classList.add('opacity-100');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0');
+      }, 2200);
+    }
+
+    function escapeHtml(str) {
+      return String(str ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function escapeXml(str) {
+      return String(str ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      loadSavedState();
+      renderBrandLogo();
+      document.getElementById('headerJudgeName').textContent = appState.judgeName;
+      renderDelegatesList();
+      updateScoredProgressBadge();
+    });
+  </script>
+</body>
+</html>
